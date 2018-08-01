@@ -1,0 +1,8 @@
+export const BASE_SECTION = 'BaseSection'
+export const FIELD_SECTION = 'FieldSection'
+export const FIELD_SUB_SECTION = 'FieldSubSection'
+export const MULTI_ROW_SECTION = 'MultiRowSection'
+export const SUMMARY_SECTION = 'SummarySection'
+export const MULTIPLICITY_SECTION = 'MultiplicitySection'
+export const EXECUTE_SECTION = 'ExecuteSection'
+export const DATA_ROW = 'DataRow'

@@ -1,0 +1,7 @@
+= Model Decision
+
+include::./decision_table.adoc[]
+
+include::./model.adoc[]
+
+include::./todo.adoc[]
