@@ -1,6 +1,6 @@
 'use strict'
 
-import { Table } from '../lib/index'
+import { TableDecision } from '../lib/index'
 import { findDouble, findDoubleCompareTestcase } from '../lib/ValidateDouble'
 
 import fileTableMoreThan30 from './fixtures/tableMoreThan30.json'
@@ -22,7 +22,7 @@ describe('VerifyDouble', () => {
     })
 
     it('find double testcases complete', () => {
-      const table = new Table()
+      const table = new TableDecision()
       Object.assign(table, fileTableMoreThan30)
       const res = findDouble(table)
 

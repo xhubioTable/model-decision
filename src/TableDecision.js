@@ -15,7 +15,7 @@ import { FIELD_SECTION, SUMMARY_SECTION } from './constants/sectionTypes'
 
 export const TABLE_TYPE = 'decision-table'
 
-export class Table extends TableInterface {
+export class TableDecision extends TableInterface {
   constructor(opts = {}) {
     super(opts)
 

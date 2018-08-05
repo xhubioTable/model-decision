@@ -2,7 +2,7 @@
 
 import path from 'path'
 
-import { Table } from '../lib/index'
+import { TableDecision } from '../lib/index'
 import createModel from '../lib/HelperModelFromJson'
 
 const dataFile = path.join(__dirname, 'fixtures', 'table_createPerson.json')
@@ -21,7 +21,7 @@ describe('Table', () => {
 
   describe('Create Instance', () => {
     it('Create instance without name', () => {
-      const obj = new Table()
+      const obj = new TableDecision()
       expect(obj !== undefined).toBeTruthy()
 
       delete obj.singleCheck
@@ -35,7 +35,7 @@ describe('Table', () => {
     })
 
     it('Create instance with name', () => {
-      const obj = new Table({ name: 'best name' })
+      const obj = new TableDecision({ name: 'best name' })
       expect(obj !== undefined).toBeTruthy()
 
       delete obj.singleCheck
@@ -51,14 +51,14 @@ describe('Table', () => {
 
   describe('addNewMultiRowSection', () => {
     it('ERROR: position < 0', () => {
-      const obj = new Table({ name: 'best name' })
+      const obj = new TableDecision({ name: 'best name' })
       expect(() => {
         obj.addNewMultiRowSection('singleRowSec', -3)
       }).toThrow()
     })
 
     it('add row no testcase', () => {
-      const obj = new Table({ name: 'best name' })
+      const obj = new TableDecision({ name: 'best name' })
       const sectionDefinition = obj.addNewMultiRowSection('multiRowSec')
 
       expect(sectionDefinition !== undefined).toBeTruthy()
@@ -82,14 +82,14 @@ describe('Table', () => {
 
   describe('addNewFieldSection', () => {
     it('ERROR: position < 0', () => {
-      const obj = new Table({ name: 'best name' })
+      const obj = new TableDecision({ name: 'best name' })
       expect(() => {
         obj.addNewFieldSection('fieldRowSec', -3)
       }).toThrow()
     })
 
     it('add section no testcase', () => {
-      const obj = new Table({ name: 'best name' })
+      const obj = new TableDecision({ name: 'best name' })
       const sectionDefinition = obj.addNewFieldSection('fieldRowSec')
 
       expect(sectionDefinition !== undefined).toBeTruthy()
@@ -113,14 +113,14 @@ describe('Table', () => {
 
   describe('addNewSummarySection', () => {
     it('ERROR: position < 0', () => {
-      const obj = new Table({ name: 'best name' })
+      const obj = new TableDecision({ name: 'best name' })
       expect(() => {
         obj.addNewSummarySection('Summary', -3)
       }).toThrow()
     })
 
     it('add section no testcase', () => {
-      const obj = new Table({ name: 'best name' })
+      const obj = new TableDecision({ name: 'best name' })
       const sectionDefinition = obj.addNewSummarySection('Summary')
 
       expect(sectionDefinition !== undefined).toBeTruthy()
@@ -144,7 +144,7 @@ describe('Table', () => {
 
   describe('addNewTestcase', () => {
     it('Add testcase no sections', () => {
-      const obj = new Table({ name: 'best name' })
+      const obj = new TableDecision({ name: 'best name' })
       const tc1 = obj.addNewTestcase('tc1')
       const tc3 = obj.addNewTestcase('tc3')
       const tc2 = obj.addNewTestcase('tc2', 1)
@@ -169,7 +169,7 @@ describe('Table', () => {
 
   describe('validate table', () => {
     it('Table without any data. Error name is missing', () => {
-      const obj = new Table()
+      const obj = new TableDecision()
       const issues = obj.validate()
       expect(issues).toEqual([
         {
@@ -182,7 +182,7 @@ describe('Table', () => {
     })
 
     it('Table without any data but name', () => {
-      const obj = new Table({ name: 'Table name' })
+      const obj = new TableDecision({ name: 'Table name' })
       const issues = obj.validate()
       expect(issues).toEqual([])
     })
@@ -190,7 +190,7 @@ describe('Table', () => {
 
   describe('Add section wich can only exists once', () => {
     it('add double summary section', () => {
-      const obj = new Table()
+      const obj = new TableDecision()
       obj.addNewSummarySection('Summary')
       expect(() => {
         obj.addNewSummarySection('Summary')
@@ -200,7 +200,7 @@ describe('Table', () => {
     })
 
     it('add double execute section', () => {
-      const obj = new Table()
+      const obj = new TableDecision()
       obj.addNewExecuteSection('Summary')
       expect(() => {
         obj.addNewExecuteSection('Summary')
@@ -210,7 +210,7 @@ describe('Table', () => {
     })
 
     it('add double multiplicity section', () => {
-      const obj = new Table()
+      const obj = new TableDecision()
       obj.addNewMultiplicitySection('Summary')
       expect(() => {
         obj.addNewMultiplicitySection('Summary')
@@ -222,7 +222,7 @@ describe('Table', () => {
 
   describe('getTestcaseForName', () => {
     it('Add testcase no sections', () => {
-      const obj = new Table({ name: 'best name' })
+      const obj = new TableDecision({ name: 'best name' })
       const tc1 = obj.addNewTestcase('tc1')
       const tc3 = obj.addNewTestcase('tc3')
       const tc2 = obj.addNewTestcase('tc2', 1)
@@ -239,7 +239,7 @@ describe('Table', () => {
   })
 
   test('getTestcasesForExecution', () => {
-    const table = new Table({ name: 'best name' })
+    const table = new TableDecision({ name: 'best name' })
     const tc1 = table.addNewTestcase('tc1')
     const tc3 = table.addNewTestcase('tc3')
     const tc2 = table.addNewTestcase('tc2', 1)

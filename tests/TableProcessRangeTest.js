@@ -1,4 +1,4 @@
-import { Table } from '../lib/index'
+import { TableDecision } from '../lib/index'
 
 const TEST_DATA = [
   ['[tc1-3]', ['tc1', 'tc2', 'tc3'], 'Valid range with base text'],
@@ -19,7 +19,7 @@ const TEST_DATA = [
   ['[tc15-15]', ['tc15'], 'Range only one value'],
 ]
 
-const table = new Table()
+const table = new TableDecision()
 
 for (const testData of TEST_DATA) {
   const range = testData[0]

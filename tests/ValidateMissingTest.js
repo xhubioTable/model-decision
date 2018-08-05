@@ -1,6 +1,6 @@
 'use strict'
 
-import { Table } from '../lib/index'
+import { TableDecision } from '../lib/index'
 import {
   combineTestcasesIsDisjunct,
   combineTestcasesSub,
@@ -83,7 +83,7 @@ describe('Validate missing', () => {
       })
 
       it('combineTestcases real table', () => {
-        const table = new Table()
+        const table = new TableDecision()
         Object.assign(table, tableCreatePerson)
 
         const combinedModel = combineTestcases(table)
