@@ -207,7 +207,7 @@ export default class TestcaseDefinition extends TestcaseDefinitionInterface {
     parts.shift()
     const instanceIdSuffix = parts.shift()
     const generatorName = parts.shift()
-    const parameter = parts.join(':')
+    const config = parts.join(':')
 
     const todo = new TodoGenerator({
       fieldName: subSection.name,
@@ -215,9 +215,9 @@ export default class TestcaseDefinition extends TestcaseDefinitionInterface {
       tableType: this.table.tableType,
       testcaseName: this.name,
       generatorName,
-      parameter,
+      config,
       instanceIdSuffix,
-      metaData: {
+      meta: {
         equivalenceClass: subSection.equivalenceClasses[key],
         comment: subSection.comments[key],
       },
