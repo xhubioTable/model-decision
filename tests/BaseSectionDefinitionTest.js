@@ -1,6 +1,6 @@
 'use strict'
 
-import { getLoggerMemory } from '@xhubioTable/logger'
+import { getLoggerMemory } from '@xhubiotable/logger'
 import { BaseSectionDefinition, sectionTypes } from '../lib/index'
 
 describe('BaseSectionDefinition', () => {

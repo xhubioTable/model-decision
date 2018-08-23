@@ -1,6 +1,9 @@
 {
-  "name": "@xhubioTable/model-decision",
-  "version": "0.0.5",
+  "name": "@xhubiotable/model-decision",
+  "version": "0.0.0-semantic-release",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "",
   "keywords": [
     "decision-table"
@@ -8,12 +11,12 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xhubioTable/model-decision.git"
+    "url": "git+https://github.com/xhubiotable/model-decision.git"
   },
   "bugs": {
-    "url": "https://github.com/xhubioTable/model-decision/issues"
+    "url": "https://github.com/xhubiotable/model-decision/issues"
   },
-  "homepage": "https://github.com/xhubioTable/model-decision#readme",
+  "homepage": "https://github.com/xhubiotable/model-decision#readme",
   "scripts": {
     "build": "npm run src_format && npm run src_lint && babel src -d lib",
     "src_lint": "eslint src tests",
@@ -35,8 +38,6 @@
   ],
   "license": "ISC",
   "devDependencies": {
-    "@xhubioTable/logger": "^0.0.1",
-    "@xhubioTable/model": "0.0.4",
     "assert": "1.4.1",
     "babel-cli": "6.26.0",
     "babel-core": "6.26.3",
@@ -60,6 +61,8 @@
     "semantic-release": "15.9.8"
   },
   "dependencies": {
+    "@xhubiotable/logger": "1.0.1",
+    "@xhubiotable/model": "1.0.2",
     "jsonfile": "4.0.0"
   }
 }
