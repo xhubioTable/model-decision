@@ -2,7 +2,7 @@
 
 import assert from 'assert'
 
-import { TableInterface } from '@xhubioTable/model'
+import { TableInterface } from '@xhubiotable/model'
 
 import FieldSectionDefinition from './FieldSectionDefinition'
 import MultiRowSectionDefinition from './MultiRowSectionDefinition'
