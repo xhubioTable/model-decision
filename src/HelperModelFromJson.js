@@ -3,7 +3,7 @@
 import jsonfile from 'jsonfile'
 import assert from 'assert'
 
-import { Table } from './Table'
+import { TableDecision } from './TableDecision'
 import TestcaseDefinition from './TestcaseDefinition'
 import FieldSectionDefinition from './FieldSectionDefinition'
 import FieldSubSectionDefinition from './FieldSubSectionDefinition'
@@ -35,7 +35,7 @@ export default function createModel(fileName) {
  * @return model {object} The created model
  */
 export function createModelFromBuffer(tableData) {
-  const table = new Table()
+  const table = new TableDecision()
   Object.assign(table, tableData)
 
   // create the testcases
