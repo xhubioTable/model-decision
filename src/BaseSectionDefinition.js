@@ -1,5 +1,3 @@
-'use strict'
-
 import uuid from 'uuid'
 import { BASE_SECTION } from './constants/sectionTypes'
 
