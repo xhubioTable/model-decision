@@ -11,12 +11,12 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xhubiotable/model-decision.git"
+    "url": "git+https://github.com/xhubioTable/model-decision.git"
   },
   "bugs": {
-    "url": "https://github.com/xhubiotable/model-decision/issues"
+    "url": "https://github.com/xhubioTable/model-decision/issues"
   },
-  "homepage": "https://github.com/xhubiotable/model-decision#readme",
+  "homepage": "https://github.com/xhubioTable/model-decision#readme",
   "scripts": {
     "build": "npm run src_format && npm run src_lint && babel src -d lib",
     "src_lint": "eslint src tests",
