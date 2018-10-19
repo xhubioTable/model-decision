@@ -6,6 +6,11 @@ import { TableDecision } from '../lib/index'
 import createModel from '../lib/HelperModelFromJson'
 
 const dataFile = path.join(__dirname, 'fixtures', 'table_createPerson.json')
+const dataFileDouble = path.join(
+  __dirname,
+  'fixtures',
+  'doubleEquivalenceName.json'
+)
 
 describe('Table', () => {
   describe('Complete table test', () => {
@@ -16,6 +21,23 @@ describe('Table', () => {
 
       // NO errors expected
       expect(issues).toEqual([])
+    })
+  })
+
+  describe('validate double field name', () => {
+    it('all', () => {
+      const model = createModel(dataFileDouble)
+      const issues = model.validate()
+
+      expect(issues).toEqual([
+        {
+          level: 'ERROR',
+          message:
+            "The fieldName 'first-name' is double in the table 'CreatePerson'",
+          table: 'CreatePerson',
+          type: 'tableDecision',
+        },
+      ])
     })
   })
 
@@ -173,8 +195,7 @@ describe('Table', () => {
       const issues = obj.validate()
       expect(issues).toEqual([
         {
-          table: obj,
-          type: 'table',
+          type: 'tableDecision',
           message: 'The table has no name',
           level: 'ERROR',
         },

@@ -190,6 +190,7 @@ export class TableDecision extends TableInterface {
    * has the following format:
    * - A table must have one and only one summary section
    * - A table must have at least one field section
+   * - The names of the fields must be unique per table
    * - A table must have at least one testcase
    */
   validate() {
@@ -197,12 +198,13 @@ export class TableDecision extends TableInterface {
 
     if (this.name === undefined) {
       issues.push({
-        table: this,
-        type: 'table',
+        type: 'tableDecision',
         message: 'The table has no name',
         level: 'ERROR',
       })
     }
+
+    const fieldNames = new Set()
 
     this.sectionOrder.forEach(sectionRowId => {
       const section = this.sections[sectionRowId]
@@ -211,6 +213,19 @@ export class TableDecision extends TableInterface {
         // we need to iterate the subSections
         section.dataRows.forEach(subSectionId => {
           const subSection = section.subSections[subSectionId]
+          const fieldName = subSection.name
+          if (fieldNames.has(fieldName)) {
+            issues.push({
+              table: this.name,
+              type: 'tableDecision',
+              message: `The fieldName '${fieldName}' is double in the table '${
+                this.name
+              }'`,
+              level: 'ERROR',
+            })
+          } else {
+            fieldNames.add(fieldName)
+          }
           this._validateSection(subSection, issues)
           this._validateTestcase(subSection, issues)
         })
