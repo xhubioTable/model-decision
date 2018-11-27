@@ -4,7 +4,7 @@ import BaseSectionDefinition from './BaseSectionDefinition'
 import { BASE_SECTION } from './constants/sectionTypes'
 
 /**
- * The summary section stores the calculations for the table
+ * A single row section is a section which consists of only one row.
  */
 export default class BaseSingleRowSectionDefinition extends BaseSectionDefinition {
   constructor(opts) {

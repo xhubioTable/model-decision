@@ -5,7 +5,7 @@ import FieldSubSectionDefinition from './FieldSubSectionDefinition'
 import { FIELD_SECTION } from './constants/sectionTypes'
 
 /**
- * A field section holds all the fields.
+ * A field section holds all the fields. A table may have as many field sections as needed
  */
 export default class FieldSectionDefinition extends BaseSectionDefinition {
   constructor(opts) {
@@ -17,7 +17,10 @@ export default class FieldSectionDefinition extends BaseSectionDefinition {
     // All the sub sections
     this.subSections = {}
 
+    // if set to a true value, the tdg fields must not be empty
     this.tdgMandatory = false
+
+    // defines if the section must have at least one value
     this.mandatory = true
 
     if (opts !== undefined) {

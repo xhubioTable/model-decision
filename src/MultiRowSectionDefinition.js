@@ -3,6 +3,9 @@
 import BaseSectionDefinition from './BaseSectionDefinition'
 import { MULTI_ROW_SECTION } from './constants/sectionTypes'
 
+/**
+ * A section with multiple rows
+ */
 export default class MultiRowSectionDefinition extends BaseSectionDefinition {
   constructor(opts) {
     super(opts)

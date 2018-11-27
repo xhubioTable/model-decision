@@ -1,6 +1,5 @@
 'use strict'
 
-import { getLoggerMemory } from '@xhubiotable/logger'
 import { SummarySectionDefinition, sectionTypes } from '../lib/index'
 
 describe('SummarySectionDefinition', () => {
@@ -16,9 +15,6 @@ describe('SummarySectionDefinition', () => {
   })
 
   it('Validate without name', () => {
-    // Cleanup old log entries
-    getLoggerMemory().clear()
-
     const obj = new SummarySectionDefinition()
     const issues = obj.validate()
 
@@ -26,9 +22,6 @@ describe('SummarySectionDefinition', () => {
   })
 
   it('Validate with name', () => {
-    // Cleanup old log entries
-    getLoggerMemory().clear()
-
     const obj = new SummarySectionDefinition({ name: 'Super object' })
     const issues = obj.validate()
 

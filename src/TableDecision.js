@@ -19,16 +19,16 @@ export class TableDecision extends TableInterface {
   constructor(opts = {}) {
     super(opts)
 
-    // The order of testcases. List of ids
+    // The order of test cases. List of uuids
     this.testcaseOrder = []
 
-    // strores the testcases by there id
+    // strores the testcases by there uuid
     this.testcases = {}
 
-    // The section definitions stored by there id
+    // The section definitions stored by there uuid
     this.sections = {}
 
-    // The section ids in the right order
+    // The section uuids in the right order
     this.sectionOrder = []
 
     // This stores the sectionType of sections
