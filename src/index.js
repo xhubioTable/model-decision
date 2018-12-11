@@ -7,10 +7,6 @@ import SummarySectionDefinition from './SummarySectionDefinition'
 import MultiplicitySectionDefinition from './MultiplicitySectionDefinition'
 import ExecuteSectionDefinition from './ExecuteSectionDefinition'
 
-import createModelHelper from '../lib/HelperModelFromJson'
-
-import { createModelFromBuffer } from '../lib/HelperModelFromJson'
-
 import { findDouble } from './ValidateDouble'
 
 import * as sectionTypes from './constants/sectionTypes'
@@ -31,6 +27,4 @@ export {
   TABLE_TYPE,
   TestcaseDefinition,
   sectionTypes,
-  createModelHelper,
-  createModelFromBuffer,
 }

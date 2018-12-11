@@ -2,7 +2,7 @@
 
 import path from 'path'
 
-import createModel from '../lib/HelperModelFromJson'
+import createModel from './HelperModelFromJson'
 
 const fixturesDir = path.join(__dirname, 'fixtures')
 const jsonFile = path.join(fixturesDir, 'descission_table_mini.json')

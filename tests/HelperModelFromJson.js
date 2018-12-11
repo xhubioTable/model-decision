@@ -3,15 +3,15 @@
 import jsonfile from 'jsonfile'
 import assert from 'assert'
 
-import { TableDecision } from './TableDecision'
-import TestcaseDefinition from './TestcaseDefinition'
-import FieldSectionDefinition from './FieldSectionDefinition'
-import FieldSubSectionDefinition from './FieldSubSectionDefinition'
-import MultiRowSectionDefinition from './MultiRowSectionDefinition'
-import SummarySectionDefinition from './SummarySectionDefinition'
-import ExecuteSectionDefinition from './ExecuteSectionDefinition'
-import MultiplicitySectionDefinition from './MultiplicitySectionDefinition'
-import * as sectionTypes from './constants/sectionTypes'
+import { TableDecision } from '../lib/TableDecision'
+import TestcaseDefinition from '../lib/TestcaseDefinition'
+import FieldSectionDefinition from '../lib/FieldSectionDefinition'
+import FieldSubSectionDefinition from '../lib/FieldSubSectionDefinition'
+import MultiRowSectionDefinition from '../lib/MultiRowSectionDefinition'
+import SummarySectionDefinition from '../lib/SummarySectionDefinition'
+import ExecuteSectionDefinition from '../lib/ExecuteSectionDefinition'
+import MultiplicitySectionDefinition from '../lib/MultiplicitySectionDefinition'
+import * as sectionTypes from '../lib/constants/sectionTypes'
 
 /**
  * Creates a real model from a serialized JSON Object.
