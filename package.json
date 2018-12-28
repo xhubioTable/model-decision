@@ -60,6 +60,7 @@
   "dependencies": {
     "@babel/runtime": "7.2.0",
     "@xhubiotable/model": "2.0.1",
+    "sprintf-js": "1.1.2",
     "uuid": "3.3.2"
   }
 }
