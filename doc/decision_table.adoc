@@ -1,30 +1,19 @@
-== Decision Table / Equivalence Class Table
 
-=== In software testing
-
-The decision table is also called equivalence class table is a technique to reduce the amount of test cases.
-With the the software tester defines the 100% coverage. And then starts reducing the test cases to the needed
-amount.
-
-It also helps to show the stakeholders what kind of tests are executed and why.
-
-=== For development
-It is also useful for software developer to help them understand the rules to be implemented for an application.
-
-
-=== How does it work
+== Layout of an equivalence class table
 
 .Example table
 image::images/model-decision/table.jpg[]
 
 This image shows an example for an equivalence class table. The table
-is divided in a few sections. This example shows a table for a payment GUI.
+is divided in a few sections.
 
 .Test case side
 image::images/model-decision/table_testcases.jpg[]
 
 The right side shows the test cases. Each column on the right side is one
-test case.
+test case. The column header of a test case is the name of this test case.
+In this example the names are just numbers. Column ''F'' is the first test case with the
+name ''1''.
 
 
 .The field description
@@ -37,14 +26,14 @@ image::images/model-decision/table_field_sections.jpg[]
 
 On the left side there are two ''field sections'' The most tables have two field sections.
 The secondary data section and the primary data section. The primary data is the data
-which will directly be manipulated in the test. The secondary data is the data constellation
+which is directly manipulated in the test. The secondary data is the data constellation
 needed by this test.
 
 For example we would like to test a payment where we exceed the day limit. Then we need to specify
 secondary data which sets the day limit for a payment.
 
 Each field section is divided in sub sections. For the payment example there is one sub section
-for each field on the UI.
+for each field in the UI.
 
 The field sections describes the variety of data needed by the test. And so the amount of tests
 to be created.
@@ -62,5 +51,5 @@ to test with 11, 12, 13, ... characters. The equivalent class is 'more than 10 c
 .Multi row section
 image::images/model-decision/table_multi_row_section.jpg[]
 
-These sections could be used to describe the expected results or error messages. It is free to the user
-how many of these sections he would like to add.
+The multi row sections could be used to describe the expected results or error messages. It is free to the user
+how many of these sections are in the table. It could also contain actions on the UI or other information needed.
