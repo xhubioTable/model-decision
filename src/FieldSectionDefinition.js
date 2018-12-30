@@ -69,10 +69,11 @@ export default class FieldSectionDefinition extends BaseSectionDefinition {
 
   /**
    * Adds a new empty field
+   * @param fieldName {string} The name of the new field
    * @return subSection {string} The new created sub section
    */
-  createNewField() {
-    const field = new FieldSubSectionDefinition()
+  createNewField(fieldName) {
+    const field = new FieldSubSectionDefinition({ name: fieldName })
     const id = field.headerRow
     this.subSections[id] = field
     this.dataRows.push(id)

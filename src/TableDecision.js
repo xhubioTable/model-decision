@@ -34,6 +34,12 @@ export class TableDecision extends TableInterface {
     // This stores the sectionType of sections
     // which must be added only once.
     this.singleCheck = new Map()
+
+    // stores all the section names per type. This is
+    // only to make sure that a section name is not used twice per table.
+    // The value is `${sectionType}-${sectionName}`
+    // Per type the name must be unique
+    this.sectionNames = new Set()
   }
 
   get tableType() {
@@ -312,6 +318,18 @@ export class TableDecision extends TableInterface {
    * @param position {integer} The position where to add the section
    */
   _addNewSection(sectionDefinition, position) {
+    // validate that the section name is unique
+    const key = `${sectionDefinition.sectionType}_${sectionDefinition.name}`
+    if (this.sectionNames.has(key)) {
+      throw new Error(
+        `The name '${sectionDefinition.name}' for the section of type '${
+          sectionDefinition.sectionType
+        }' is double in the table '${this.name}'`
+      )
+    } else {
+      this.sectionNames.add(key)
+    }
+
     if (!sectionDefinition.multiInstancesAllowed) {
       // This type of section is only allowed to be added once to a table.
       // check if it already exists

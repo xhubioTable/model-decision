@@ -47,6 +47,7 @@ describe('Table', () => {
       expect(obj !== undefined).toBeTruthy()
 
       delete obj.singleCheck
+      delete obj.sectionNames
       expect(obj).toEqual({
         name: undefined,
         testcaseOrder: [],
@@ -61,6 +62,7 @@ describe('Table', () => {
       expect(obj !== undefined).toBeTruthy()
 
       delete obj.singleCheck
+      delete obj.sectionNames
       expect(obj).toEqual({
         name: 'best name',
         testcaseOrder: [],
@@ -92,6 +94,7 @@ describe('Table', () => {
       expect(obj.sections[definitionId]).toEqual(sectionDefinition)
       delete obj.sections
       delete obj.singleCheck
+      delete obj.sectionNames
 
       expect(obj).toEqual({
         name: 'best name',
@@ -123,6 +126,7 @@ describe('Table', () => {
       expect(obj.sections[definitionId]).toEqual(sectionDefinition)
       delete obj.sections
       delete obj.singleCheck
+      delete obj.sectionNames
 
       expect(obj).toEqual({
         name: 'best name',
@@ -154,6 +158,7 @@ describe('Table', () => {
       expect(obj.sections[definitionId]).toEqual(sectionDefinition)
       delete obj.sections
       delete obj.singleCheck
+      delete obj.sectionNames
 
       expect(obj).toEqual({
         name: 'best name',
@@ -214,7 +219,7 @@ describe('Table', () => {
       const obj = new TableDecision()
       obj.addNewSummarySection('Summary')
       expect(() => {
-        obj.addNewSummarySection('Summary')
+        obj.addNewSummarySection('Summary2')
       }).toThrow(
         `The section of type 'SummarySection' must not be added multiple times to the model`
       )
@@ -224,7 +229,7 @@ describe('Table', () => {
       const obj = new TableDecision()
       obj.addNewExecuteSection('Summary')
       expect(() => {
-        obj.addNewExecuteSection('Summary')
+        obj.addNewExecuteSection('Summary2')
       }).toThrow(
         `The section of type 'ExecuteSection' must not be added multiple times to the model`
       )
@@ -234,7 +239,7 @@ describe('Table', () => {
       const obj = new TableDecision()
       obj.addNewMultiplicitySection('Summary')
       expect(() => {
-        obj.addNewMultiplicitySection('Summary')
+        obj.addNewMultiplicitySection('Summary2')
       }).toThrow(
         `The section of type 'MultiplicitySection' must not be added multiple times to the model`
       )

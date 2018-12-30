@@ -17,6 +17,7 @@ describe('HelperModelFromJson', () => {
     expect(tableModel).toBeTruthy()
     delete tableModel.singleCheck
     delete tableModel.logger
+    delete tableModel.sectionNames
 
     expect(tableModel).toEqual(MODEL)
     tableModel.calculate()
