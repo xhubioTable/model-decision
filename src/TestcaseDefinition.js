@@ -240,16 +240,17 @@ export default class TestcaseDefinition extends TestcaseDefinitionInterface {
     const targetFieldName = parts[3]
     const targetTestcaseName = parts[4]
 
-    if (targetTestcaseName === undefined) {
-      this.logger.error({
-        function: '_createReferenceTodo',
-        message: 'The target test case name must not be empty',
-        referenceCmd: generatorCmd,
-        table: this.table.name,
-        testCaseName: this.name,
-      })
-      throw new Error('References: missing test case name')
-    }
+    // @link Removed, because a self reference must not have a test case name
+    // if (targetTestcaseName === undefined) {
+    //   this.logger.error({
+    //     function: '_createReferenceTodo',
+    //     message: 'The target test case name must not be empty',
+    //     referenceCmd: generatorCmd,
+    //     table: this.table.name,
+    //     testCaseName: this.name,
+    //   })
+    //   throw new Error('References: missing test case name')
+    // }
 
     const todo = new TodoReference({
       fieldName: subSection.name,

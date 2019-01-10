@@ -105,16 +105,17 @@ export class TableDecision extends TableInterface {
       for (const element of elements) {
         const matches = element.trim().match(regEx)
         if (matches !== null) {
-          if (matches[2] > matches[3]) {
-            const tmp = matches[3]
-            matches[3] = matches[2]
-            matches[2] = tmp
-          }
-
           // This elements itself defines a range
           const startElement = matches[1]
-          const startNumber = matches[2]
-          const endNumber = matches[3]
+          let startNumber = parseInt(matches[2], 10)
+          let endNumber = parseInt(matches[3], 10)
+
+          if (startNumber > endNumber) {
+            const tmp = endNumber
+            endNumber = startNumber
+            startNumber = tmp
+          }
+
           for (let i = startNumber; i <= endNumber; i++) {
             tcNames.push(`${startElement}${i}`)
           }
