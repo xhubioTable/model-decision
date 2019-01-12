@@ -10,6 +10,7 @@ const TEST_DATA = [
   ['15-17', ['15-17'], 'No Range, because no brackets 2'],
   ['gum,bo', ['gum,bo'], 'Comma separated: No Range, because no brackets'],
   ['[gum,bo]', ['gum', 'bo'], 'Comma separated'],
+  ['[A6-11]', ['A6', 'A7', 'A8', 'A9', 'A10', 'A11'], 'Comma separated'],
   [
     '[gum,tc3-5,bo]',
     ['gum', 'tc3', 'tc4', 'tc5', 'bo'],

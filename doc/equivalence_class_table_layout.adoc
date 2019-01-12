@@ -1,11 +1,16 @@
 
-== Layout of an equivalence class table
+== Layout Equivalence Class Table
 
 .Example table
 image::images/model-decision/table.jpg[]
 
-This image shows an example for an equivalence class table. The table
-is divided in a few sections.
+This image shows an example for an equivalence class table.
+The column order is important. The first five columns are fix. In the
+6th column the test cases starts. The parser find the end of the test case
+by parsing the first row and searching for the first empty cell. So if you
+add an empty column in your table the parser will stop there.
+
+The table is divided in a few sections.
 
 .Test case side
 image::images/model-decision/table_testcases.jpg[]
@@ -15,25 +20,11 @@ test case. The column header of a test case is the name of this test case.
 In this example the names are just numbers. Column ''F'' is the first test case with the
 name ''1''.
 
-
-.The field description
-image::images/model-decision/table_fields.jpg[]
-
 The left side of the table describes the fields. And the expected result.
 
-.Field section
-image::images/model-decision/table_field_sections.jpg[]
-
-On the left side there are two ''field sections'' The most tables have two field sections.
-The secondary data section and the primary data section. The primary data is the data
-which is directly manipulated in the test. The secondary data is the data constellation
-needed by this test.
-
-For example we would like to test a payment where we exceed the day limit. Then we need to specify
-secondary data which sets the day limit for a payment.
-
-Each field section is divided in sub sections. For the payment example there is one sub section
-for each field in the UI.
+On the left side is one ''field section'' the primary data section. The primary data is the data
+which is directly manipulated in the test. But this is just a name. You could have as many
+'FieldSection' elements as you like. A field section consists of one to many 'FieldSubSection' elements.
 
 The field sections describes the variety of data needed by the test. And so the amount of tests
 to be created.

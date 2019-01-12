@@ -1,7 +1,6 @@
-= Model Decision
 
-include::./decision_table.adoc[]
+include::./equivalence_class_table_layout.adoc[]
 
-include::./model.adoc[]
+include::./equivalence_class_table_sections.adoc[]
 
 include::./todo.adoc[]

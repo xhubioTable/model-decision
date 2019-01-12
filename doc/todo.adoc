@@ -1,7 +1,3 @@
 == TODOs
 
-* eine methode zur validierung wenn die Daten generiert werden sollen.
-
-* eine section für die Ausführung von testfällen 'execute'
-
-* eine section für die multiplizität 'tc count'. Gibt an wieviele TCs erzeugt werden sollen
+* Create back references

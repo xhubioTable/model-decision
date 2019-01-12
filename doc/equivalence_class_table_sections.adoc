@@ -1,0 +1,37 @@
+== Sections of an Equivalence Class Table
+
+
+== FieldSection
+The field section is the main section of an equivalence class table. The field section contains
+many field sub sections. It is a kind of parenthesis around fields. It is a kind of grouping element.
+
+== FieldSubSection
+This section contains all the equivalence classes for one single field.
+
+== MultiRowSection
+The MultirowSections could be used for your own purpose. These sections are not directly supported by
+the test data generator like the field sections. But each data generator has access to the data from the
+multi row sections.
+
+== Single Row Sections
+Single row sections are sections which have only one row.
+
+=== ExecuteSection
+
+image::images/model-decision/execute_section.png[width=420]
+
+The image shows the execute section. In this example the test case '2' in column
+'G' is set to 'F' which is false. So this test case would not be executed.
+
+=== MultiplicitySection
+
+image::images/model-decision/multiplicity_section.png[width=420]
+
+The image shows the multiplicity section section. In this example the test case '1' in column
+'f' is set to '10'. This means the data generator will create 10 of these test cases.
+
+=== SummarySection
+
+image::images/model-decision/summary_section.png[width=420]
+
+The summary section is not used by the generator. Is only for the user.
