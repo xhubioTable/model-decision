@@ -54,6 +54,7 @@ describe('Table', () => {
         testcases: {},
         sections: {},
         sectionOrder: [],
+        meta: {},
       })
     })
 
@@ -69,6 +70,7 @@ describe('Table', () => {
         testcases: {},
         sections: {},
         sectionOrder: [],
+        meta: {},
       })
     })
   })
@@ -101,6 +103,7 @@ describe('Table', () => {
         testcaseOrder: [],
         testcases: {},
         sectionOrder: [definitionId],
+        meta: {},
       })
     })
   })
@@ -133,6 +136,7 @@ describe('Table', () => {
         testcaseOrder: [],
         testcases: {},
         sectionOrder: [definitionId],
+        meta: {},
       })
     })
   })
@@ -165,6 +169,7 @@ describe('Table', () => {
         testcaseOrder: [],
         testcases: {},
         sectionOrder: [definitionId],
+        meta: {},
       })
     })
   })

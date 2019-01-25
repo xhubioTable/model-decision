@@ -35,6 +35,7 @@ describe('HelperModelFromJson', () => {
 
 const MODEL = {
   name: 'CreatePerson_mini',
+  meta: {},
   sectionOrder: [
     'db14bc27-4884-48a0-a6d9-7ebbeaff89fe',
     'aa7045ff-00dd-44b5-beac-209d307ded4a',
