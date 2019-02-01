@@ -61,14 +61,9 @@ export default class TestcaseDefinition extends TestcaseDefinitionInterface {
   get name() {
     return this._name
   }
+
   set name(name) {
     this._name = name
-  }
-
-  get tableType() {
-    if (this.table) {
-      return this.table.tableType
-    }
   }
 
   /**
@@ -95,12 +90,12 @@ export default class TestcaseDefinition extends TestcaseDefinitionInterface {
     // - references
     // - meta data
     // -------------------------------------------
-    this.table.sectionOrder.forEach(sectionRowId => {
+    for (const sectionRowId of this.table.sectionOrder) {
       const section = this.table.sections[sectionRowId]
       // For this section we need to call the generator or the reference
       if (section.sectionType === sectionTypes.FIELD_SECTION) {
         // we need to iterate the subSections
-        section.dataRows.forEach(subSectionId => {
+        for (const subSectionId of section.dataRows) {
           // const sectionName = section.name
           const subSection = section.subSections[subSectionId]
           const { generatorCmd, key } = this._getGeneratorCommandForSubSection(
@@ -135,13 +130,13 @@ export default class TestcaseDefinition extends TestcaseDefinitionInterface {
             )
             todos.static.push(todo)
           } else {
-            this.logger.info(
-              `No Generator data for table '${this.table.name}' and field '${
+            throw new Error(
+              `No Generator data for table '${this.tableName}' and field '${
                 subSection.name
               }' for test case '${this.name}'`
             )
           }
-        })
+        }
       } else if (section.sectionType === sectionTypes.MULTI_ROW_SECTION) {
         // This section only adds meta data to the testcase
         const todoList = this._createMultirowSectionTodo(section)
@@ -149,7 +144,7 @@ export default class TestcaseDefinition extends TestcaseDefinitionInterface {
           todos.meta.push(todo)
         }
       }
-    })
+    }
 
     return todos
   }
@@ -211,8 +206,8 @@ export default class TestcaseDefinition extends TestcaseDefinitionInterface {
 
     const todo = new TodoGenerator({
       fieldName: subSection.name,
-      tableName: this.table.name,
-      tableType: this.table.tableType,
+      tableName: this.tableName,
+      tableType: this.tableType,
       testcaseName: this.name,
       generatorName,
       config,
@@ -221,6 +216,7 @@ export default class TestcaseDefinition extends TestcaseDefinitionInterface {
         equivalenceClass: subSection.equivalenceClasses[key],
         comment: subSection.comments[key],
       },
+      testcaseMeta: this.metaInformation,
     })
 
     return todo
@@ -254,8 +250,8 @@ export default class TestcaseDefinition extends TestcaseDefinitionInterface {
 
     const todo = new TodoReference({
       fieldName: subSection.name,
-      tableName: this.table.name,
-      tableType: this.table.tableType,
+      tableName: this.tableName,
+      tableType: this.tableType,
       testcaseName: this.name,
       targetTableName,
       targetFieldName,
@@ -265,6 +261,7 @@ export default class TestcaseDefinition extends TestcaseDefinitionInterface {
         equivalenceClass: subSection.equivalenceClasses[key],
         comment: subSection.comments[key],
       },
+      testcaseMeta: this.metaInformation,
     })
 
     return todo
@@ -280,14 +277,15 @@ export default class TestcaseDefinition extends TestcaseDefinitionInterface {
   _createStaticValueTodo(subSection, generatorCmd, key) {
     const todo = new TodoStatic({
       fieldName: subSection.name,
-      tableName: this.table.name,
-      tableType: this.table.tableType,
+      tableName: this.tableName,
+      tableType: this.tableType,
       testcaseName: this.name,
       value: generatorCmd,
       meta: {
         equivalenceClass: subSection.equivalenceClasses[key],
         comment: subSection.comments[key],
       },
+      testcaseMeta: this.metaInformation,
     })
 
     return todo
@@ -312,10 +310,11 @@ export default class TestcaseDefinition extends TestcaseDefinitionInterface {
         }
         const todo = new TodoMeta({
           fieldName: section.name,
-          tableName: this.table.name,
-          tableType: this.table.tableType,
+          tableName: this.tableName,
+          tableType: this.tableType,
           testcaseName: this.name,
           meta,
+          testcaseMeta: this.metaInformation,
         })
         todos.push(todo)
       }
