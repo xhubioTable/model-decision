@@ -130,7 +130,7 @@ export default class TestcaseDefinition extends TestcaseDefinitionInterface {
             )
             todos.static.push(todo)
           } else {
-            throw new Error(
+            this.logger.info(
               `No Generator data for table '${this.tableName}' and field '${
                 subSection.name
               }' for test case '${this.name}'`
