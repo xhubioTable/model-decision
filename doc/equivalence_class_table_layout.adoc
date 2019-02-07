@@ -39,6 +39,9 @@ For example the is a field with a maximum length of 10. Then all values entered 
 10 chars will lead to an equivalent behaviour of the application. So it is not necessary
 to test with 11, 12, 13, ... characters. The equivalent class is 'more than 10 chars'
 
+One fieldSection may have many fieldSubSections. The FieldSection groups fields together. If you have one or many
+fieldSections has no impact on the table itself. All the fieldSubSections have to be combined.
+
 .Multi row section
 image::images/model-decision/table_multi_row_section.jpg[]
 
