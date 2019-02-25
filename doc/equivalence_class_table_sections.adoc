@@ -3,7 +3,7 @@
 
 == FieldSection
 The field section is the main section of an equivalence class table. The field section contains
-many field sub sections. It is a kind of parenthesis around fields. It is a kind of grouping element.
+many field sub sections. It is a kind of parenthesis around fields and a grouping of element.
 
 == FieldSubSection
 This section contains all the equivalence classes for one single field.
@@ -27,7 +27,7 @@ The image shows the execute section. In this example the test case '2' in column
 
 image::images/model-decision/multiplicity_section.png[width=420]
 
-The image shows the multiplicity section section. In this example the test case '1' in column
+The image shows the multiplicity section. In this example the test case '1' in column
 'f' is set to '10'. This means the data generator will create 10 of these test cases.
 
 === SummarySection
