@@ -23,7 +23,7 @@ export default class TestcaseDefinition extends TestcaseDefinitionInterface {
     // if true, than the testcase is included into the completness computation
     this.isPartOfCompletion = true
 
-    // Should this test case be executed or is it ony for a refernce
+    // Should this test case be executed or is it ony for a reference
     this._execute = true
 
     this.data = opts.data || {}
@@ -38,6 +38,7 @@ export default class TestcaseDefinition extends TestcaseDefinitionInterface {
     })
 
     newTd._execute = this._execute
+    newTd._neverExecute = this._neverExecute
     newTd._name = this._name
     newTd.isPartOfCompletion = this.isPartOfCompletion
 
@@ -45,7 +46,7 @@ export default class TestcaseDefinition extends TestcaseDefinitionInterface {
   }
 
   /**
-   * Should this test case be executed or is it only for a refernce
+   * Should this test case be executed or is it only for a reference
    */
   get execute() {
     return this._execute
@@ -59,7 +60,9 @@ export default class TestcaseDefinition extends TestcaseDefinitionInterface {
    * testcase could be found in the table
    */
   get name() {
-    return this._name
+    if (this._name !== undefined) {
+      return String(this._name)
+    }
   }
 
   set name(name) {
@@ -223,7 +226,7 @@ export default class TestcaseDefinition extends TestcaseDefinitionInterface {
   }
 
   /**
-   * Creates a refernce todo
+   * Creates a reference todo
    * @param subSection {object} The current FieldSubSection
    * @param generatorCmd {string} The reference command
    * @param key {string} The key of the value in the subSection

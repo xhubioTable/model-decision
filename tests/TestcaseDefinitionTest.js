@@ -16,6 +16,7 @@ describe('TestcaseDefinition', () => {
       meta: undefined,
       _name: undefined,
       _execute: true,
+      _neverExecute: false,
       table: undefined,
     })
   })
@@ -32,6 +33,7 @@ describe('TestcaseDefinition', () => {
       meta: undefined,
       _name: 'tc 1',
       _execute: true,
+      _neverExecute: false,
       table: undefined,
     })
   })
