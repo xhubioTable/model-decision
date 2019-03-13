@@ -23,6 +23,14 @@ image::images/model-decision/execute_section.png[width=420]
 The image shows the execute section. In this example the test case '2' in column
 'G' is set to 'F' which is false. So this test case would not be executed.
 
+=== NeverExecuteSection
+
+This section is the opposite of the ExecuteSection. If in the ExecuteSection a test case is set to a true value
+this test case will be generated. If it is set to a false value the test case is not created. But if this test case
+is referenced from an other table it is used and the data is generated. The NeverExecuteSection works the other way around.
+If this is set to a true value for a test case, the test case is created. But if this test case is referenced from an
+other test case, the referencing test case is not created.
+
 === MultiplicitySection
 
 image::images/model-decision/multiplicity_section.png[width=420]
