@@ -13,7 +13,7 @@ import {
 /**
  * A test case is one column in the test case part
  */
-export default class TestcaseDefinition extends TestcaseDefinitionInterface {
+export default class TestcaseDefinitionDecision extends TestcaseDefinitionInterface {
   constructor(opts = {}) {
     super(opts)
 
@@ -33,7 +33,7 @@ export default class TestcaseDefinition extends TestcaseDefinitionInterface {
    * Clone the current testcase definition
    */
   clone() {
-    const newTd = new TestcaseDefinition({
+    const newTd = new TestcaseDefinitionDecision({
       ...this,
     })
 
@@ -67,6 +67,57 @@ export default class TestcaseDefinition extends TestcaseDefinitionInterface {
 
   set name(name) {
     this._name = name
+  }
+
+  /**
+   * Returns all the tags found in this test case
+   * @return tags {array} An Array with all the found tags
+   */
+  createTags() {
+    const tags = []
+
+    for (const sectionRowId of this.table.sectionOrder) {
+      const section = this.table.sections[sectionRowId]
+      if (section.sectionType === sectionTypes.TAG_SECTION) {
+        const rowIds = section.dataRows
+
+        rowIds.forEach(dataRowId => {
+          const val = this.data[dataRowId]
+          if (val !== undefined) {
+            const tag = section.tags[dataRowId]
+            tags.push(tag)
+          }
+        })
+      }
+    }
+    return tags
+  }
+
+  /**
+   * Returns all the filter found in this test case
+   * @return filter {array} An Array with all the found filter
+   */
+  createFilter() {
+    const filter = []
+
+    for (const sectionRowId of this.table.sectionOrder) {
+      const section = this.table.sections[sectionRowId]
+      if (section.sectionType === sectionTypes.FILTER_SECTION) {
+        const rowIds = section.dataRows
+
+        rowIds.forEach(dataRowId => {
+          const val = this.data[dataRowId]
+          if (val !== undefined) {
+            const filterProcessorName = section.filterProcessorNames[dataRowId]
+            const expression = section.expressions[dataRowId]
+            const comment = section.comments[dataRowId]
+            filter.push({ filterProcessorName, expression, comment })
+          }
+        })
+      }
+    }
+
+    return filter
   }
 
   /**

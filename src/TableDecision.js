@@ -6,6 +6,8 @@ import { TableInterface } from '@xhubiotable/model'
 
 import FieldSectionDefinition from './FieldSectionDefinition'
 import MultiRowSectionDefinition from './MultiRowSectionDefinition'
+import TagSectionDefinition from './TagSectionDefinition'
+import FilterSectionDefinition from './FilterSectionDefinition'
 import SummarySectionDefinition from './SummarySectionDefinition'
 import MultiplicitySectionDefinition from './MultiplicitySectionDefinition'
 import ExecuteSectionDefinition from './ExecuteSectionDefinition'
@@ -412,6 +414,28 @@ export class TableDecision extends TableInterface {
       new MultiRowSectionDefinition({ name }),
       position
     )
+  }
+
+  /**
+   * Adds a new MultiRowSection to the model. For each existing testcase
+   * a section will be added.
+   * @param name {string} The name for the new section. The name must not be used before
+   * @param position {integer} (optional) The position where to add the new section.
+   * @return sectionDefinition {object} The created section definition
+   */
+  addNewTagSection(name, position) {
+    return this._addNewSection(new TagSectionDefinition({ name }), position)
+  }
+
+  /**
+   * Adds a new MultiRowSection to the model. For each existing testcase
+   * a section will be added.
+   * @param name {string} The name for the new section. The name must not be used before
+   * @param position {integer} (optional) The position where to add the new section.
+   * @return sectionDefinition {object} The created section definition
+   */
+  addNewFilterSection(name, position) {
+    return this._addNewSection(new FilterSectionDefinition({ name }), position)
   }
 
   /**

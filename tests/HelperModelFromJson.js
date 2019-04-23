@@ -4,7 +4,7 @@ import jsonfile from 'jsonfile'
 import assert from 'assert'
 
 import { TableDecision } from '../lib/TableDecision'
-import TestcaseDefinition from '../lib/TestcaseDefinition'
+import TestcaseDefinitionDecision from '../lib/TestcaseDefinitionDecision'
 import FieldSectionDefinition from '../lib/FieldSectionDefinition'
 import FieldSubSectionDefinition from '../lib/FieldSubSectionDefinition'
 import MultiRowSectionDefinition from '../lib/MultiRowSectionDefinition'
@@ -40,7 +40,7 @@ export function createModelFromBuffer(tableData) {
 
   // create the testcases
   table.testcaseOrder.forEach(tcId => {
-    const tc = new TestcaseDefinition()
+    const tc = new TestcaseDefinitionDecision()
     const tcData = table.testcases[tcId]
     Object.assign(tc, tcData)
     table.testcases[tcId] = tc

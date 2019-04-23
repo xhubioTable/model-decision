@@ -1,10 +1,13 @@
 'use strict'
 
-import { TestcaseDefinition, MultiRowSectionDefinition } from '../lib/index'
+import {
+  TestcaseDefinitionDecision,
+  MultiRowSectionDefinition,
+} from '../lib/index'
 
-describe('TestcaseDefinition', () => {
+describe('TestcaseDefinitionDecision', () => {
   it('Create instance', () => {
-    const obj = new TestcaseDefinition()
+    const obj = new TestcaseDefinitionDecision()
     delete obj.id
     delete obj.logger
 
@@ -22,7 +25,7 @@ describe('TestcaseDefinition', () => {
   })
 
   it('Create instance with name', () => {
-    const obj = new TestcaseDefinition({ name: 'tc 1' })
+    const obj = new TestcaseDefinitionDecision({ name: 'tc 1' })
     delete obj.id
     delete obj.logger
 
@@ -40,7 +43,7 @@ describe('TestcaseDefinition', () => {
 
   describe('validate', () => {
     it('Create instance with name', () => {
-      const obj = new TestcaseDefinition({ name: 'Super testcase' })
+      const obj = new TestcaseDefinitionDecision({ name: 'Super testcase' })
       const section = new MultiRowSectionDefinition({ name: 'Super section' })
       section.mandatory = false
 
@@ -49,7 +52,7 @@ describe('TestcaseDefinition', () => {
     })
 
     it('Create instance missing name', () => {
-      const obj = new TestcaseDefinition()
+      const obj = new TestcaseDefinitionDecision()
       const section = new MultiRowSectionDefinition({ name: 'Super section' })
       section.mandatory = false
 
@@ -58,8 +61,8 @@ describe('TestcaseDefinition', () => {
       expect(issues[0].message).toEqual('The testcase has no name')
     })
 
-    it('TestcaseDefinition with missing value', () => {
-      const obj = new TestcaseDefinition({ name: 'Super testcase' })
+    it('TestcaseDefinitionDecision with missing value', () => {
+      const obj = new TestcaseDefinitionDecision({ name: 'Super testcase' })
       const section = new MultiRowSectionDefinition({ name: 'Super section' })
       section.mandatory = true
       section.createNewRow()
@@ -74,8 +77,8 @@ describe('TestcaseDefinition', () => {
       )
     })
 
-    it('TestcaseDefinition with too many values', () => {
-      const obj = new TestcaseDefinition({ name: 'Super testcase' })
+    it('TestcaseDefinitionDecision with too many values', () => {
+      const obj = new TestcaseDefinitionDecision({ name: 'Super testcase' })
       const section = new MultiRowSectionDefinition({ name: 'Super section' })
       const rowId1 = section.createNewRow()
       section.createNewRow()
