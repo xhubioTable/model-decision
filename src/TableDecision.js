@@ -13,7 +13,7 @@ import MultiplicitySectionDefinition from './MultiplicitySectionDefinition'
 import ExecuteSectionDefinition from './ExecuteSectionDefinition'
 import NeverExecuteSectionDefinition from './NeverExecuteSectionDefinition'
 
-import TestcaseDefinition from './TestcaseDefinition'
+import TestcaseDefinitionDecision from './TestcaseDefinitionDecision'
 import { FIELD_SECTION, SUMMARY_SECTION } from './constants/sectionTypes'
 
 export const TABLE_TYPE = 'decision-table'
@@ -374,7 +374,7 @@ export class TableDecision extends TableInterface {
    * @return testcase {object} The created testcase
    */
   addNewTestcase(name, position) {
-    const testcase = new TestcaseDefinition({ name, table: this })
+    const testcase = new TestcaseDefinitionDecision({ name, table: this })
 
     // add the section definition
     const id = testcase.id
