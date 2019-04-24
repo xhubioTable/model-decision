@@ -13,7 +13,10 @@ import { findDouble } from './ValidateDouble'
 
 import * as sectionTypes from './constants/sectionTypes'
 
-import { TableDecision, TABLE_TYPE } from './TableDecision'
+import {
+  TableDecision,
+  TABLE_TYPE as TABLE_TYPE_DECISION,
+} from './TableDecision'
 import TestcaseDefinitionDecision from './TestcaseDefinitionDecision'
 
 export {
@@ -28,7 +31,7 @@ export {
   ExecuteSectionDefinition,
   findDouble,
   TableDecision,
-  TABLE_TYPE,
+  TABLE_TYPE_DECISION,
   TestcaseDefinitionDecision,
   sectionTypes,
 }
