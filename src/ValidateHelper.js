@@ -1,5 +1,3 @@
-'use strict'
-
 import { sprintf } from 'sprintf-js'
 import assert from 'assert'
 

@@ -1,9 +1,7 @@
-'use strict'
-
 import { buildRowModel, buildTestcaseModel } from './ValidateHelper'
 
 /**
- * Find double testcase definitions
+ * Find double testcase definitions.
  * @param table {object} The table model
  * @returns errors {object} The found double testcases
  */
@@ -47,7 +45,7 @@ function findDoubleSub(testCaseModel) {
 }
 
 /**
- * Compares one testcase with an other and checks if there are double
+ * Compares one testcase with an other and checks if it is a double one.
  * @param tc1 {object} The first testcase
  * @param tc2 {object} The second testcase
  * @returns results {object} Object returned only if there are double

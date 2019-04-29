@@ -1,10 +1,9 @@
-'use strict'
-
 import BaseSectionDefinition from './BaseSectionDefinition'
 import { FIELD_SUB_SECTION } from './constants/sectionTypes'
 
 /**
- * The sub section defines all the equivalenz classes for one field
+ * The sub section of a FieldSectionDefinition. Defines all the equivalence classes for one field
+ * @extends BaseSectionDefinition
  */
 export default class FieldSubSectionDefinition extends BaseSectionDefinition {
   constructor(opts) {
@@ -12,20 +11,22 @@ export default class FieldSubSectionDefinition extends BaseSectionDefinition {
 
     this.sectionType = FIELD_SUB_SECTION
 
-    // Store the equivalenz class entries by there rowID
+    /** Stores the equivalenz class entries by there rowID */
     this.equivalenceClasses = {}
 
-    // stores the comments by there there rowID
+    /** Stores the comments by there there rowID */
     this.comments = {}
 
-    // stores the data generator entries by there there rowID
+    /** stores the data generator entries by there there rowID */
     this.tdgs = {}
 
-    // if set to a true value, the tdg fields must not be empty
+    /** Defines if the dataGenerator column is mandatory. Default=false. */
     this.tdgMandatory = false
+
+    /** Defines if the section must have at least one value. Default=true */
     this.mandatory = true
 
-    // The id of the parentSection
+    /** The id of the parentSection */
     this.parent = undefined
 
     if (opts !== undefined) {

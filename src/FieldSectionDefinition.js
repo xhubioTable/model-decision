@@ -1,11 +1,11 @@
-'use strict'
-
 import BaseSectionDefinition from './BaseSectionDefinition'
 import FieldSubSectionDefinition from './FieldSubSectionDefinition'
 import { FIELD_SECTION } from './constants/sectionTypes'
 
 /**
- * A field section holds all the fields. A table may have as many field sections as needed
+ * This is the most important section for a decision table. This section
+ * is devided into 1..n sub sections. It is the section containing the relevant data.
+ * @extends BaseSectionDefinition
  */
 export default class FieldSectionDefinition extends BaseSectionDefinition {
   constructor(opts) {
@@ -13,14 +13,13 @@ export default class FieldSectionDefinition extends BaseSectionDefinition {
 
     this.sectionType = FIELD_SECTION
 
-    // The section definitions stored by there id
-    // All the sub sections
+    /** {object} The subSections of this fieldSection. The section definitions stored by there id */
     this.subSections = {}
 
-    // if set to a true value, the tdg fields must not be empty
+    /** Defines if the dataGenerator column is mandatory. Default=false. */
     this.tdgMandatory = false
 
-    // defines if the section must have at least one value
+    /** Defines if the section must have at least one value. Default=true */
     this.mandatory = true
 
     if (opts !== undefined) {
@@ -35,7 +34,7 @@ export default class FieldSectionDefinition extends BaseSectionDefinition {
 
   /**
    * Validates this section definition.
-   * - A fieldSection must have at least one subSection
+   * A fieldSection must have at least one subSection.
    * @return issues {array} An array of issues found
    */
   validate() {

@@ -1,10 +1,10 @@
-'use strict'
-
 import BaseSectionDefinition from './BaseSectionDefinition'
 import { BASE_SECTION } from './constants/sectionTypes'
 
 /**
  * A single row section is a section which consists of only one row.
+ * All the existing single row sections inherits from this section.
+ * @extends BaseSectionDefinition
  */
 export default class BaseSingleRowSectionDefinition extends BaseSectionDefinition {
   constructor(opts) {
@@ -17,7 +17,8 @@ export default class BaseSingleRowSectionDefinition extends BaseSectionDefinitio
   }
 
   /**
-   * This kind of section is its own data row
+   * This kind of section is its own data row.
+   * @return {array} Returns an array of rowIds, In this case only one.
    */
   get dataRows() {
     return [this.headerRow]

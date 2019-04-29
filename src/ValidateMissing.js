@@ -1,5 +1,3 @@
-'use strict'
-
 import assert from 'assert'
 
 import { buildRowModel, buildTestcaseModel } from './ValidateHelper'

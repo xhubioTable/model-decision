@@ -1,11 +1,10 @@
-'use strict'
-
 import BaseSectionDefinition from './BaseSectionDefinition'
 import { TAG_SECTION } from './constants/sectionTypes'
 
 /**
- * A section with multiple rows
- * Allows to add tags to test cases. Later on you can filter on these tags
+ * This section enables the user to add lables to test cases. These lables could
+ * be used to filter test cases with the FilterSection.
+ * @extends BaseSectionDefinition
  */
 export default class TagSectionDefinition extends BaseSectionDefinition {
   constructor(opts) {
@@ -13,13 +12,13 @@ export default class TagSectionDefinition extends BaseSectionDefinition {
 
     this.sectionType = TAG_SECTION
 
-    // stores the tag entries by there there rowID
+    /** stores the 'tag' entries by there there rowID */
     this.tags = {}
 
-    // stores the comments by there there rowID
+    /** stores the 'comment' entries by there there rowID */
     this.comments = {}
 
-    // stores the 'other' entries by there there rowID
+    /** stores the 'others' entries by there there rowID */
     this.others = {}
   }
 

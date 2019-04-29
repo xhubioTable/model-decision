@@ -1,5 +1,3 @@
-'use strict'
-
 import BaseSingleRowSectionDefinition from './BaseSingleRowSectionDefinition'
 import { MULTIPLICITY_SECTION } from './constants/sectionTypes'
 
@@ -8,6 +6,7 @@ import { MULTIPLICITY_SECTION } from './constants/sectionTypes'
  * in the table. The default is one. If the value given is '0' Then no test case
  * will be created. Is for example the value is '5' then five instances of this
  * test case definition will be created.
+ * @extends BaseSingleRowSectionDefinition
  */
 export default class MultiplicitySectionDefinition extends BaseSingleRowSectionDefinition {
   constructor(opts) {

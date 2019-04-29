@@ -1,10 +1,10 @@
-'use strict'
-
 import BaseSectionDefinition from './BaseSectionDefinition'
 import { MULTI_ROW_SECTION } from './constants/sectionTypes'
 
 /**
- * A section with multiple rows
+ * A section with multiple rows. This section has no defined functionality. The data is just
+ * transfered to the data model when the data is generated. It is used to add attributes to test cases.
+ * @extends BaseSectionDefinition
  */
 export default class MultiRowSectionDefinition extends BaseSectionDefinition {
   constructor(opts) {
@@ -12,13 +12,13 @@ export default class MultiRowSectionDefinition extends BaseSectionDefinition {
 
     this.sectionType = MULTI_ROW_SECTION
 
-    // stores the key entries by there there rowID
+    /** Stores the 'key' entries by there there rowID */
     this.keys = {}
 
-    // stores the comments by there there rowID
+    /** Stores the 'comment' entries by there there rowID */
     this.comments = {}
 
-    // stores the 'other' entries by there there rowID
+    /** Stores the 'other' entries by there there rowID */
     this.others = {}
   }
 

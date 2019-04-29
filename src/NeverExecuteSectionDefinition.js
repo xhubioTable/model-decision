@@ -1,11 +1,10 @@
-'use strict'
-
 import BaseSingleRowSectionDefinition from './BaseSingleRowSectionDefinition'
 import { NEVER_EXECUTE_SECTION } from './constants/sectionTypes'
 
 /**
- * This sections defines if a test case should be created or if the
- * test case definition is only a source for a reference.
+ * This section could be used to prevent the test case creation if it is referenced
+ * by an other test case.
+ * @extends BaseSingleRowSectionDefinition
  */
 export default class NeverExecuteSectionDefinition extends BaseSingleRowSectionDefinition {
   constructor(opts) {

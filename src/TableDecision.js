@@ -1,5 +1,3 @@
-'use strict'
-
 import assert from 'assert'
 
 import { TableInterface } from '@xhubiotable/model'
@@ -18,36 +16,49 @@ import { FIELD_SECTION, SUMMARY_SECTION } from './constants/sectionTypes'
 
 export const TABLE_TYPE = 'decision-table'
 
+/**
+ * The table implementation for a decision table.
+ * @extends TableInterface
+ */
 export class TableDecision extends TableInterface {
   constructor(opts = {}) {
     super(opts)
 
-    // The order of test cases. List of uuids
+    /** The order of test cases. A list of test case ids */
     this.testcaseOrder = []
 
-    // strores the testcases by there uuid
+    /** Stores the testcases by there id */
     this.testcases = {}
 
-    // The section definitions stored by there uuid
+    /** The section definitions stored by there id */
     this.sections = {}
 
-    // The section uuids in the right order
+    /** The order of the sections. A list of section ids */
     this.sectionOrder = []
 
-    // This stores the sectionType of sections
-    // which must be added only once.
+    /**
+     * This map is used to verify if sections which must only exists once are
+     * used more often. The map stores the sections by there sectionType.
+     */
     this.singleCheck = new Map()
 
-    // stores all the section names per type. This is
-    // only to make sure that a section name is not used twice per table.
-    // The value is `${sectionType}-${sectionName}`
-    // Per type the name must be unique
+    /**
+     * Stores all the section names per type. This is
+     * only to make sure that a section name is not used twice per table.
+     * The value is `${sectionType}-${sectionName}`
+     * Per type the name must be unique
+     */
     this.sectionNames = new Set()
   }
 
+  /**
+   * Stores the type of the table
+   * @return {string} The type of this table.
+   */
   get tableType() {
     return TABLE_TYPE
   }
+
   /**
    * Returns the testcase for the given name. If not found it will throw an exception
    * @param testcaseName {string} The name of the testcase
@@ -70,6 +81,8 @@ export class TableDecision extends TableInterface {
 
   /**
    * This generator returns all the testcases which should be executed
+   * @generator
+   * @yields {testcaseDefinitionInterface}
    */
   *getTestcasesForExecution() {
     for (const testcaseId of this.testcaseOrder) {
@@ -92,7 +105,7 @@ export class TableDecision extends TableInterface {
   }
 
   /**
-   * Parses a testcase name. If the name is a range it will return an
+   * Parses a testcase name given in a reference. If the name is a range it will return an
    * Array of names. For example the name 'tc12-14' will be expended to:
    * tc12, tc13, tc14
    * @param testcaseName {string} The reference test case name
@@ -132,7 +145,7 @@ export class TableDecision extends TableInterface {
   }
 
   /**
-   * calculates the summaries for each section
+   * Calculates the summary for each section.
    * The results will be added to the section rows and to the summary section
    */
   // calculate(sectionRowId, rowIds)

@@ -1,11 +1,10 @@
-'use strict'
-
 import BaseSectionDefinition from './BaseSectionDefinition'
 import { FILTER_SECTION } from './constants/sectionTypes'
 
 /**
- * A section with multiple rows
- * Allows to add tags to test cases. Later on you can filter on these tags
+ * A FilterSection is used to filter test cases when the data generator creates the data out of
+ * theses tables.
+ * @extends BaseSectionDefinition
  */
 export default class FilterSectionDefinition extends BaseSectionDefinition {
   constructor(opts) {
@@ -13,13 +12,13 @@ export default class FilterSectionDefinition extends BaseSectionDefinition {
 
     this.sectionType = FILTER_SECTION
 
-    // stores the tag entries by there there rowID
+    /** Stores the names of the filter processors by there row id */
     this.filterProcessorNames = {}
 
-    // stores the comments by there there rowID
+    /** Stores the filter expressions by there rowId */
     this.expressions = {}
 
-    // stores the 'other' entries by there there rowID
+    /** Stores the comment entries by there there rowID */
     this.comments = {}
   }
 

@@ -1,28 +1,28 @@
-'use strict'
-
 import BaseSectionDefinition from './BaseSectionDefinition'
 import { SUMMARY_SECTION } from './constants/sectionTypes'
 
 /**
  * The summary section stores the calculations for the table
+ * @extends BaseSectionDefinition
  */
 export default class SummarySectionDefinition extends BaseSectionDefinition {
   constructor(opts) {
     super(opts)
     this.sectionType = SUMMARY_SECTION
 
-    // the amount of all test combinations
+    /** The amount of all test combinations */
     this.total = undefined
 
-    // the amount of done test combinations
+    /** The amount of done test combinations */
     this.done = undefined
 
-    // the amount of done test combinations in percent
+    /** The percantage of test combinations done */
     this.percent = undefined
 
     delete this.mandatory
     // delete this.dataRows;
 
+    /** The summary section must exists only once in ad model */
     this.multiInstancesAllowed = false
   }
 

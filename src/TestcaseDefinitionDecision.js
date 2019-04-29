@@ -11,7 +11,8 @@ import {
 } from '@xhubiotable/model'
 
 /**
- * A test case is one column in the test case part
+ * A test case is one column in the test case part. This is the implementation for the decision table.
+ * @extends TestcaseDefinitionInterface
  */
 export default class TestcaseDefinitionDecision extends TestcaseDefinitionInterface {
   constructor(opts = {}) {
@@ -20,17 +21,19 @@ export default class TestcaseDefinitionDecision extends TestcaseDefinitionInterf
     // the name of this testcase
     this._name = opts.name
 
-    // if true, than the testcase is included into the completness computation
+    /** Defines if this testcase is included into the completness computation */
     this.isPartOfCompletion = true
 
-    // Should this test case be executed or is it ony for a reference
+    // Should this test case be executed or is it only for a reference
     this._execute = true
 
+    /** The data of this test case */
     this.data = opts.data || {}
   }
 
   /**
-   * Clone the current testcase definition
+   * Clone the current testcase definition.
+   * @return {object} A clone of this test case definition.
    */
   clone() {
     const newTd = new TestcaseDefinitionDecision({
@@ -51,6 +54,7 @@ export default class TestcaseDefinitionDecision extends TestcaseDefinitionInterf
   get execute() {
     return this._execute
   }
+
   set execute(execute) {
     this._execute = execute
   }

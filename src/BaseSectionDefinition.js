@@ -4,35 +4,38 @@ import { BASE_SECTION } from './constants/sectionTypes'
 const uuidV4 = uuid.v4
 
 /**
- * Base class for all the sections.
+ * Base class for all the sections used in the decision table.
+ * A decision table is devided in different sections.
+ * Each section has different funktionality.
  */
 export default class BaseSectionDefinition {
   constructor(opts = {}) {
-    // overwrite by sub class
+    /** The type of a section. To be overwrite by a sub class. */
     this.sectionType = BASE_SECTION
 
-    // The name of this section
+    /** The name of this section. */
     this.name = opts.name
 
-    // defines if the section must have at least one value
+    /** Defines if the section must have at least one value. */
     this.mandatory = false
 
-    // defines if this section may have more than one row
+    /** defines if this section may have more than one row. */
     this.multiple = true
 
-    // This id is used to identify a row or section in the model.
-    // All rows and columns are identified by auch an id.
+    /** This id is used to identify a row or section in the model.
+     * All rows and columns are identified by auch an id.
+     */
     this.headerRow = uuidV4()
 
-    // stores the IDs of the data rows. Not the rows itself.
+    /** Stores the IDs of the data rows. Not the rows itself. */
     this.dataRows = []
 
-    // If set to false only one of this sections is allowed per model
+    /** If set to false only one section of this type is allowed per model. */
     this.multiInstancesAllowed = true
   }
 
   /**
-   * Returns true if the given row id is from a header row
+   * Returns true if the given row id is from a header row.
    */
   isHeader(id) {
     return this.headerRow === id
@@ -40,7 +43,7 @@ export default class BaseSectionDefinition {
 
   /**
    * Creates a new row for this section.
-   * generates a new UUID and add it to the row array.
+   * Generates a new UUID and add it to the row array.
    * @return id {string} The new created row id
    */
   createNewRow() {
@@ -66,7 +69,7 @@ export default class BaseSectionDefinition {
 
   /**
    * Validates this section definition.
-   * - Name must exists
+   * Checks that the name of the section exists.
    * @return issues {array} An array of issues found
    */
   validate() {
