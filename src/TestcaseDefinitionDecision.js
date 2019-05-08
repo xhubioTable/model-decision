@@ -125,6 +125,54 @@ export default class TestcaseDefinitionDecision extends TestcaseDefinitionInterf
   }
 
   /**
+   * Returns a list of generator names which should not be executed
+   * @return generatorNames {array} An Array with alle the generator names to be switched off for this test case
+   */
+  createGeneratorSwitches() {
+    const generatorNames = []
+
+    for (const sectionRowId of this.table.sectionOrder) {
+      const section = this.table.sections[sectionRowId]
+      if (section.sectionType === sectionTypes.GENERATOR_SWITCH_SECTION) {
+        const rowIds = section.dataRows
+
+        for (const dataRowId of rowIds) {
+          const val = this.data[dataRowId]
+          const valueElement = section.values[dataRowId]
+          if (val !== undefined && this._isTrue(valueElement)) {
+            const genName = section.generatorNames[dataRowId]
+            generatorNames.push(genName)
+          }
+        }
+      }
+    }
+    return generatorNames
+  }
+
+  /**
+   * Checks if the given string contains a valid true value
+   * @param val {string} The expression to check
+   * @return res {boolean} TRUE if the value is a valid boolean true value.
+   */
+  _isTrue(val) {
+    if (typeof val === 'string') {
+      const expression = val.toUpperCase()
+      if (
+        expression === 'T' ||
+        expression === 'TRUE' ||
+        expression === 'YES' ||
+        expression === 'Y' ||
+        expression === 'JA' ||
+        expression === 'J' ||
+        expression === '1'
+      ) {
+        return true
+      }
+    }
+    return false
+  }
+
+  /**
    * Create all the todos for this testcase definition
    * const todos = {
    *   generators :[genTodo,],
@@ -293,6 +341,21 @@ export default class TestcaseDefinitionDecision extends TestcaseDefinitionInterf
     const targetTableName = parts[2] || this.table.name
     const targetFieldName = parts[3]
     const targetTestcaseName = parts[4]
+
+    if (
+      targetTestcaseName !== undefined &&
+      targetTestcaseName.startsWith('[') &&
+      targetFieldName !== undefined &&
+      targetFieldName !== ''
+    ) {
+      this.logger.error({
+        function: '_createReferenceTodo',
+        message: `If a test case range is given, the 'targetFieldName' must be null`,
+        referenceCmd: generatorCmd,
+        table: this.table.name,
+        testCaseName: this.name,
+      })
+    }
 
     // @link Removed, because a self reference must not have a test case name
     // if (targetTestcaseName === undefined) {

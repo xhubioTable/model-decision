@@ -1,13 +1,13 @@
 import BaseSectionDefinition from './BaseSectionDefinition'
+import ExecuteSectionDefinition from './ExecuteSectionDefinition'
 import FieldSectionDefinition from './FieldSectionDefinition'
 import FieldSubSectionDefinition from './FieldSubSectionDefinition'
-import MultiRowSectionDefinition from './MultiRowSectionDefinition'
-import TagSectionDefinition from './TagSectionDefinition'
 import FilterSectionDefinition from './FilterSectionDefinition'
-import SummarySectionDefinition from './SummarySectionDefinition'
-
+import GeneratorSwitchSectionDefinition from './GeneratorSwitchSectionDefinition'
 import MultiplicitySectionDefinition from './MultiplicitySectionDefinition'
-import ExecuteSectionDefinition from './ExecuteSectionDefinition'
+import MultiRowSectionDefinition from './MultiRowSectionDefinition'
+import SummarySectionDefinition from './SummarySectionDefinition'
+import TagSectionDefinition from './TagSectionDefinition'
 
 import { findDouble } from './ValidateDouble'
 
@@ -21,17 +21,18 @@ import TestcaseDefinitionDecision from './TestcaseDefinitionDecision'
 
 export {
   BaseSectionDefinition,
+  ExecuteSectionDefinition,
   FieldSectionDefinition,
   FieldSubSectionDefinition,
-  MultiRowSectionDefinition,
-  TagSectionDefinition,
   FilterSectionDefinition,
-  SummarySectionDefinition,
-  MultiplicitySectionDefinition,
-  ExecuteSectionDefinition,
   findDouble,
-  TableDecision,
-  TABLE_TYPE_DECISION,
-  TestcaseDefinitionDecision,
+  GeneratorSwitchSectionDefinition,
+  MultiplicitySectionDefinition,
+  MultiRowSectionDefinition,
   sectionTypes,
+  SummarySectionDefinition,
+  TABLE_TYPE_DECISION,
+  TableDecision,
+  TagSectionDefinition,
+  TestcaseDefinitionDecision,
 }

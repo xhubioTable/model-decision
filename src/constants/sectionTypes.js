@@ -15,6 +15,9 @@ export const TAG_SECTION = 'TagSection'
 /** Section type definition: 'FilterSection' @enum {string} */
 export const FILTER_SECTION = 'FilterSection'
 
+/** Section type definition: 'GeneratorSwitchSection' @enum {string} */
+export const GENERATOR_SWITCH_SECTION = 'GeneratorSwitchSection'
+
 /** Section type definition: 'SummarySection' @enum {string} */
 export const SUMMARY_SECTION = 'SummarySection'
 
