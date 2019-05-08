@@ -342,20 +342,21 @@ export default class TestcaseDefinitionDecision extends TestcaseDefinitionInterf
     const targetFieldName = parts[3]
     const targetTestcaseName = parts[4]
 
-    if (
-      targetTestcaseName !== undefined &&
-      targetTestcaseName.startsWith('[') &&
-      targetFieldName !== undefined &&
-      targetFieldName !== ''
-    ) {
-      this.logger.error({
-        function: '_createReferenceTodo',
-        message: `If a test case range is given, the 'targetFieldName' must be null`,
-        referenceCmd: generatorCmd,
-        table: this.table.name,
-        testCaseName: this.name,
-      })
-    }
+    // @link Removed, because a it works
+    // if (
+    //   targetTestcaseName !== undefined &&
+    //   targetTestcaseName.startsWith('[') &&
+    //   targetFieldName !== undefined &&
+    //   targetFieldName !== ''
+    // ) {
+    //   this.logger.error({
+    //     function: '_createReferenceTodo',
+    //     message: `If a test case range is given, the 'targetFieldName' must be null`,
+    //     referenceCmd: generatorCmd,
+    //     table: this.table.name,
+    //     testCaseName: this.name,
+    //   })
+    // }
 
     // @link Removed, because a self reference must not have a test case name
     // if (targetTestcaseName === undefined) {
