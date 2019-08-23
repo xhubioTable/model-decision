@@ -24,7 +24,7 @@ export default class BaseSingleRowSectionDefinition extends BaseSectionDefinitio
     return [this.headerRow]
   }
 
-  // eslint-disable-next-line no-unsed-vars
+  // eslint-disable-next-line no-unused-vars
   set dataRows(rowId) {
     // do nothing
   }

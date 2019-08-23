@@ -74,9 +74,7 @@ export class TableDecision extends TableInterface {
     }
 
     throw new Error(
-      `Could not find the testcase '${testcaseName}' in the table '${
-        this.name
-      }'`
+      `Could not find the testcase '${testcaseName}' in the table '${this.name}'`
     )
   }
 
@@ -242,9 +240,7 @@ export class TableDecision extends TableInterface {
             issues.push({
               table: this.name,
               type: 'tableDecision',
-              message: `The fieldName '${fieldName}' is double in the table '${
-                this.name
-              }'`,
+              message: `The fieldName '${fieldName}' is double in the table '${this.name}'`,
               level: 'ERROR',
             })
           } else {
@@ -340,9 +336,7 @@ export class TableDecision extends TableInterface {
     const key = `${sectionDefinition.sectionType}_${sectionDefinition.name}`
     if (this.sectionNames.has(key)) {
       throw new Error(
-        `The name '${sectionDefinition.name}' for the section of type '${
-          sectionDefinition.sectionType
-        }' is double in the table '${this.name}'`
+        `The name '${sectionDefinition.name}' for the section of type '${sectionDefinition.sectionType}' is double in the table '${this.name}'`
       )
     } else {
       this.sectionNames.add(key)
@@ -354,9 +348,7 @@ export class TableDecision extends TableInterface {
 
       if (this.singleCheck.has(sectionDefinition.sectionType)) {
         throw new Error(
-          `The section of type '${
-            sectionDefinition.sectionType
-          }' must not be added multiple times to the model`
+          `The section of type '${sectionDefinition.sectionType}' must not be added multiple times to the model`
         )
       }
       this.singleCheck.set(sectionDefinition.sectionType, sectionDefinition)

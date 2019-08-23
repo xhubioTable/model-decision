@@ -237,9 +237,7 @@ export default class TestcaseDefinitionDecision extends TestcaseDefinitionInterf
             todos.static.push(todo)
           } else {
             this.logger.info(
-              `No Generator data for table '${this.tableName}' and field '${
-                subSection.name
-              }' for test case '${this.name}'`
+              `No Generator data for table '${this.tableName}' and field '${subSection.name}' for test case '${this.name}'`
             )
           }
         }
@@ -526,9 +524,7 @@ export default class TestcaseDefinitionDecision extends TestcaseDefinitionInterf
       issues.push({
         section,
         type: 'testcase value',
-        message: `The testcase '${
-          this.name
-        }' has no value defined for the section '${section.name}'`,
+        message: `The testcase '${this.name}' has no value defined for the section '${section.name}'`,
         level: 'ERROR',
         row: section.headerRow,
         column: this.id,
@@ -540,9 +536,7 @@ export default class TestcaseDefinitionDecision extends TestcaseDefinitionInterf
       issues.push({
         section,
         type: 'testcase value',
-        message: `The testcase '${
-          this.name
-        }' has too many values defined for the section '${section.name}'`,
+        message: `The testcase '${this.name}' has too many values defined for the section '${section.name}'`,
         level: 'ERROR',
         row: section.headerRow,
         column: this.id,
