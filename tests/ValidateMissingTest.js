@@ -1,6 +1,6 @@
 'use strict'
 
-import { TableDecision } from '../lib/index'
+import { TableDecision } from '../src/index'
 import {
   combineTestcasesIsDisjunct,
   combineTestcasesSub,
@@ -139,7 +139,7 @@ function createTestcase(name, data) {
   }
 
   let i = 0
-  data.forEach(field => {
+  data.forEach((field) => {
     i++
     const val = {
       rows: new Array(data.length),

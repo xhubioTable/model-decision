@@ -85,7 +85,7 @@ export default class TestcaseDefinitionDecision extends TestcaseDefinitionInterf
       if (section.sectionType === sectionTypes.TAG_SECTION) {
         const rowIds = section.dataRows
 
-        rowIds.forEach(dataRowId => {
+        rowIds.forEach((dataRowId) => {
           const val = this.data[dataRowId]
           if (val !== undefined) {
             const tag = section.tags[dataRowId]
@@ -109,7 +109,7 @@ export default class TestcaseDefinitionDecision extends TestcaseDefinitionInterf
       if (section.sectionType === sectionTypes.FILTER_SECTION) {
         const rowIds = section.dataRows
 
-        rowIds.forEach(dataRowId => {
+        rowIds.forEach((dataRowId) => {
           const val = this.data[dataRowId]
           if (val !== undefined) {
             const filterProcessorName = section.filterProcessorNames[dataRowId]
@@ -265,7 +265,7 @@ export default class TestcaseDefinitionDecision extends TestcaseDefinitionInterf
     // later on we need to randomly extract one of them
     const dataSetE = {}
     const dataSetA = {} // if the value is an 'a' this means prefered value
-    rowIds.forEach(dataRowId => {
+    rowIds.forEach((dataRowId) => {
       const val = this.data[dataRowId]
       if (val !== undefined && val.toLowerCase() !== 'i') {
         if (val.toLowerCase() === 'a') {
@@ -420,7 +420,7 @@ export default class TestcaseDefinitionDecision extends TestcaseDefinitionInterf
     const rowIds = section.dataRows
     const todos = []
 
-    rowIds.forEach(dataRowId => {
+    rowIds.forEach((dataRowId) => {
       const val = this.data[dataRowId]
       if (val !== undefined) {
         const meta = {
@@ -451,7 +451,7 @@ export default class TestcaseDefinitionDecision extends TestcaseDefinitionInterf
    */
   calculate(sectionRowId, rowIds) {
     let count = 0
-    rowIds.forEach(rowId => {
+    rowIds.forEach((rowId) => {
       if (this.data[rowId] !== undefined) {
         count++
       }
@@ -513,7 +513,7 @@ export default class TestcaseDefinitionDecision extends TestcaseDefinitionInterf
 
     // count how many rows of this section have a value
     let counter = 0
-    section.dataRows.forEach(rowId => {
+    section.dataRows.forEach((rowId) => {
       if (this.data[rowId] !== undefined) {
         counter++
       }

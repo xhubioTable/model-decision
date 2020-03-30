@@ -101,7 +101,7 @@ export function combineTestcasesSub(tc1, tc2) {
   let isFalse = false
 
   // iterate all the fields of both testcases
-  Object.keys(tc1.data).forEach(sectionRowId => {
+  Object.keys(tc1.data).forEach((sectionRowId) => {
     const val1 = tc1.data[sectionRowId].val
     const val2 = tc2.data[sectionRowId].val
     if (Array.isArray(val1)) {

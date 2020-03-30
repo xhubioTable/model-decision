@@ -34,7 +34,7 @@ export default class GeneratorSwitchSectionDefinition extends BaseSectionDefinit
     // used to check for double values
     const helper = {}
 
-    this.dataRows.forEach(rowId => {
+    this.dataRows.forEach((rowId) => {
       if (this.generatorNames[rowId] === undefined) {
         issues.push({
           section: this,

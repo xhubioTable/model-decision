@@ -1,6 +1,6 @@
 'use strict'
 
-import { MultiRowSectionDefinition, sectionTypes } from '../lib/index'
+import { MultiRowSectionDefinition, sectionTypes } from '../src/index'
 
 describe('MultiRowSectionDefinition', () => {
   it('Create instance', () => {

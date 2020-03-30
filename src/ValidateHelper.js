@@ -7,7 +7,7 @@ export function printHelper(tc) {
   assert(tc)
 
   let str = `${tc.name}\t`
-  Object.keys(tc.data).forEach(sectionRowId => {
+  Object.keys(tc.data).forEach((sectionRowId) => {
     const val = tc.data[sectionRowId].val
     // let valStr = val.toString(2).split('').reverse().join('');
     let valStr = val.toString(2)
@@ -29,10 +29,10 @@ export function buildRowModel(table) {
   assert(table)
   const model = {}
 
-  table.sectionOrder.forEach(sectionRowId => {
+  table.sectionOrder.forEach((sectionRowId) => {
     const section = table.sections[sectionRowId]
     if (section.sectionType === FIELD_SECTION) {
-      section.dataRows.forEach(subSectionRowId => {
+      section.dataRows.forEach((subSectionRowId) => {
         const subSection = section.subSections[subSectionRowId]
 
         const rowIds = subSection.dataRows
@@ -68,7 +68,7 @@ export function buildTestcaseModel(table, rowModel) {
 
   // and array of tescases
   const model = []
-  table.testcaseOrder.forEach(tcId => {
+  table.testcaseOrder.forEach((tcId) => {
     const testcase = table.testcases[tcId]
     const testCaseObject = {
       id: tcId,
@@ -87,7 +87,7 @@ export function buildTestcaseModel(table, rowModel) {
       let values = []
 
       // iterate the rows of a sectionKey
-      subSection.rows.forEach(rowId => {
+      subSection.rows.forEach((rowId) => {
         if (testcase.data[rowId] === undefined) {
           values.push(0)
         } else {

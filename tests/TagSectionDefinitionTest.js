@@ -1,6 +1,6 @@
 'use strict'
 
-import { TagSectionDefinition, sectionTypes } from '../lib/index'
+import { TagSectionDefinition, sectionTypes } from '../src/index'
 
 describe('TagSectionDefinition', () => {
   it('Create instance', () => {
