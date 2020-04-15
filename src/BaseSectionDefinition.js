@@ -1,7 +1,5 @@
-import uuid from 'uuid'
+import { v4 as uuidv4 } from 'uuid'
 import { BASE_SECTION } from './constants/sectionTypes'
-
-const uuidV4 = uuid.v4
 
 /**
  * Base class for all the sections used in the decision table.
@@ -25,7 +23,7 @@ export default class BaseSectionDefinition {
     /** This id is used to identify a row or section in the model.
      * All rows and columns are identified by auch an id.
      */
-    this.headerRow = uuidV4()
+    this.headerRow = uuidv4()
 
     /** Stores the IDs of the data rows. Not the rows itself. */
     this.dataRows = []
@@ -48,7 +46,7 @@ export default class BaseSectionDefinition {
    */
   createNewRow() {
     if (this.multiple) {
-      const id = uuidV4()
+      const id = uuidv4()
       this.dataRows.push(id)
       return id
     }

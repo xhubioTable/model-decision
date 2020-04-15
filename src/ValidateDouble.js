@@ -53,7 +53,7 @@ function findDoubleSub(testCaseModel) {
 export function findDoubleCompareTestcase(tc1, tc2) {
   const results = {}
   let isDouble = true
-  Object.keys(tc1).forEach(sectionRowId => {
+  Object.keys(tc1).forEach((sectionRowId) => {
     // get the integer vlues for one field
     const tc1Val = tc1[sectionRowId].val
     const tc2Val = tc2[sectionRowId].val

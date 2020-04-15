@@ -1,6 +1,6 @@
 'use strict'
 
-import { TableDecision } from '../lib/index'
+import { TableDecision } from '../src/index'
 import { findDouble, findDoubleCompareTestcase } from '../lib/ValidateDouble'
 
 import fileTableMoreThan30 from './fixtures/tableMoreThan30.json'

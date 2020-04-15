@@ -1,6 +1,6 @@
 'use strict'
 
-import { GeneratorSwitchSectionDefinition, sectionTypes } from '../lib/index'
+import { GeneratorSwitchSectionDefinition, sectionTypes } from '../src/index'
 
 describe('GeneratorSwitchSectionDefinition', () => {
   it('Create instance', () => {

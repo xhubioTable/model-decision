@@ -1,6 +1,6 @@
 'use strict'
 
-import { BaseSectionDefinition, sectionTypes } from '../lib/index'
+import { BaseSectionDefinition, sectionTypes } from '../src/index'
 
 describe('BaseSectionDefinition', () => {
   it('Create instance', () => {

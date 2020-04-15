@@ -1,6 +1,6 @@
 'use strict'
 
-import { FieldSectionDefinition, sectionTypes } from '../lib/index'
+import { FieldSectionDefinition, sectionTypes } from '../src/index'
 
 describe('FieldSectionDefinition', () => {
   it('Create instance', () => {

@@ -2,7 +2,7 @@
 
 import path from 'path'
 
-import { TableDecision } from '../lib/index'
+import { TableDecision } from '../src/index'
 import createModel from './HelperModelFromJson'
 
 const dataFile = path.join(__dirname, 'fixtures', 'table_createPerson.json')

@@ -34,7 +34,7 @@ export default class FilterSectionDefinition extends BaseSectionDefinition {
     // used to check for double values
     const helper = {}
 
-    this.dataRows.forEach(rowId => {
+    this.dataRows.forEach((rowId) => {
       if (this.filterProcessorNames[rowId] === undefined) {
         issues.push({
           section: this,

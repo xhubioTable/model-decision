@@ -1,6 +1,6 @@
 'use strict'
 
-import { FilterSectionDefinition, sectionTypes } from '../lib/index'
+import { FilterSectionDefinition, sectionTypes } from '../src/index'
 
 describe('FilterSectionDefinition', () => {
   it('Create instance', () => {

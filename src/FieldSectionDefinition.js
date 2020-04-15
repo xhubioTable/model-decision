@@ -49,7 +49,7 @@ export default class FieldSectionDefinition extends BaseSectionDefinition {
       })
     } else {
       // iterate the subSections
-      this.dataRows.forEach(rowId => {
+      this.dataRows.forEach((rowId) => {
         const subSectionDefinition = this.subSections[rowId]
         subSectionDefinition.validate()
       })

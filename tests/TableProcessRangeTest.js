@@ -1,4 +1,4 @@
-import { TableDecision } from '../lib/index'
+import { TableDecision } from '../src/index'
 
 const TEST_DATA = [
   ['[tc1-3]', ['tc1', 'tc2', 'tc3'], 'Valid range with base text'],

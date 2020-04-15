@@ -34,7 +34,7 @@ export default class TagSectionDefinition extends BaseSectionDefinition {
     // used to check for double values
     const helper = {}
 
-    this.dataRows.forEach(rowId => {
+    this.dataRows.forEach((rowId) => {
       if (this.tags[rowId] === undefined) {
         issues.push({
           section: this,

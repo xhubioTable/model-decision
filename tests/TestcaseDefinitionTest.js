@@ -3,7 +3,7 @@
 import {
   TestcaseDefinitionDecision,
   MultiRowSectionDefinition,
-} from '../lib/index'
+} from '../src/index'
 
 describe('TestcaseDefinitionDecision', () => {
   it('Create instance', () => {

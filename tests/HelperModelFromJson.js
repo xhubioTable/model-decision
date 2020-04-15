@@ -39,7 +39,7 @@ export function createModelFromBuffer(tableData) {
   Object.assign(table, tableData)
 
   // create the testcases
-  table.testcaseOrder.forEach(tcId => {
+  table.testcaseOrder.forEach((tcId) => {
     const tc = new TestcaseDefinitionDecision()
     const tcData = table.testcases[tcId]
     Object.assign(tc, tcData)
@@ -47,7 +47,7 @@ export function createModelFromBuffer(tableData) {
   })
 
   // iterates the sections
-  Object.keys(table.sections).forEach(sectionId => {
+  Object.keys(table.sections).forEach((sectionId) => {
     const section = table.sections[sectionId]
     assignSection(table, section, sectionId)
   })
@@ -99,7 +99,7 @@ function assignSection(table, section, sectionId, parent) {
 
   if (sectionType === sectionTypes.FIELD_SECTION) {
     // in this case we need to handle also the subSections
-    Object.keys(section.subSections).forEach(subSectionId => {
+    Object.keys(section.subSections).forEach((subSectionId) => {
       const subSection = section.subSections[subSectionId]
       assignSection(table, subSection, subSectionId, sectionObject)
     })

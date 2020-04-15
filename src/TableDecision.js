@@ -152,20 +152,20 @@ export class TableDecision extends TableInterface {
     let isFirst = true
     let sumAll = 1
     let summarySection
-    this.testcaseOrder.forEach(tcId => {
+    this.testcaseOrder.forEach((tcId) => {
       let summarySectionId // The id of the summary section
       let sum = 1
 
       const testcase = this.testcases[tcId]
 
-      this.sectionOrder.forEach(sectionRowId => {
+      this.sectionOrder.forEach((sectionRowId) => {
         const section = this.sections[sectionRowId]
 
         if (section.sectionType === FIELD_SECTION) {
           const sectionId = section.headerRow
           let sectionSum = 1
           // we need to iterate the subSections
-          section.dataRows.forEach(subSectionId => {
+          section.dataRows.forEach((subSectionId) => {
             const subSection = section.subSections[subSectionId]
             const rowIds = subSection.dataRows
             const count = testcase.calculate(sectionId, rowIds)
@@ -196,7 +196,7 @@ export class TableDecision extends TableInterface {
     // update the calculation in the summary section
     const summarySectionId = summarySection.headerRow
     let allTestcaseSum = 0
-    this.testcaseOrder.forEach(tcId => {
+    this.testcaseOrder.forEach((tcId) => {
       const testcase = this.testcases[tcId]
       allTestcaseSum += testcase.data[summarySectionId]
     })
@@ -228,12 +228,12 @@ export class TableDecision extends TableInterface {
 
     const fieldNames = new Set()
 
-    this.sectionOrder.forEach(sectionRowId => {
+    this.sectionOrder.forEach((sectionRowId) => {
       const section = this.sections[sectionRowId]
 
       if (section.sectionType === FIELD_SECTION) {
         // we need to iterate the subSections
-        section.dataRows.forEach(subSectionId => {
+        section.dataRows.forEach((subSectionId) => {
           const subSection = section.subSections[subSectionId]
           const fieldName = subSection.name
           if (fieldNames.has(fieldName)) {
@@ -267,7 +267,7 @@ export class TableDecision extends TableInterface {
     assert(section)
     assert(issues)
 
-    section.validate().forEach(issue => {
+    section.validate().forEach((issue) => {
       issues.push(issue)
     })
   }
@@ -278,9 +278,9 @@ export class TableDecision extends TableInterface {
    * @param issues {array} The array to store the found issues
    */
   _validateTestcase(section, issues) {
-    this.testcaseOrder.forEach(tcId => {
+    this.testcaseOrder.forEach((tcId) => {
       const testcase = this.testcases[tcId]
-      testcase.validate(section).forEach(issue => {
+      testcase.validate(section).forEach((issue) => {
         issues.push(issue)
       })
     })
@@ -304,7 +304,7 @@ export class TableDecision extends TableInterface {
 
     if (section.sectionType === 'FieldSection') {
       this.rowMap[section.headerRow] = { type: 'section', object: section }
-      section.dataRows.forEach(rowId => {
+      section.dataRows.forEach((rowId) => {
         const subSection = section.sections[rowId]
         this._buildSectionRows(subSection)
       })
@@ -313,10 +313,10 @@ export class TableDecision extends TableInterface {
       if (section.sectionType === 'FieldSubSection') {
         names = ['equivalenceClasses', 'tdgs', 'comments']
       }
-      section.dataRows.forEach(rowId => {
+      section.dataRows.forEach((rowId) => {
         const myRow = { type: 'row', parent: section.headerRow }
         let i = 2
-        names.forEach(name => {
+        names.forEach((name) => {
           myRow['c' + i] = section[name][rowId]
           i++
         })

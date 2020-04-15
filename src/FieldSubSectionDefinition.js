@@ -55,7 +55,7 @@ export default class FieldSubSectionDefinition extends BaseSectionDefinition {
     // used to check for double values
     const helper = {}
 
-    this.dataRows.forEach(rowId => {
+    this.dataRows.forEach((rowId) => {
       if (this.tdgMandatory && this.tdgs[rowId] === undefined) {
         issues.push({
           section: this,
