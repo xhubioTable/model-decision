@@ -72,5 +72,10 @@
     "@xhubiotable/model": "2.4.2",
     "sprintf-js": "1.1.2",
     "uuid": "7.0.2"
+  },
+  "template": {
+    "usedBy": [
+      "xhubioTable/model-matrix"
+    ]
   }
 }
