@@ -71,6 +71,6 @@
     "@babel/runtime": "7.12.5",
     "@xhubiotable/model": "2.4.4",
     "sprintf-js": "1.1.2",
-    "uuid": "8.3.1"
+    "uuid": "8.3.2"
   }
 }
