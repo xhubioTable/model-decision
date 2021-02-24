@@ -68,7 +68,7 @@
     "semantic-release": "17.3.0"
   },
   "dependencies": {
-    "@babel/runtime": "7.12.5",
+    "@babel/runtime": "7.13.6",
     "@xhubiotable/model": "2.4.4",
     "sprintf-js": "1.1.2",
     "uuid": "8.3.2"
