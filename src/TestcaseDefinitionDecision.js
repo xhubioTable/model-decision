@@ -204,9 +204,8 @@ export default class TestcaseDefinitionDecision extends TestcaseDefinitionInterf
         for (const subSectionId of section.dataRows) {
           // const sectionName = section.name
           const subSection = section.subSections[subSectionId]
-          const { generatorCmd, key } = this._getGeneratorCommandForSubSection(
-            subSection
-          )
+          const { generatorCmd, key } =
+            this._getGeneratorCommandForSubSection(subSection)
 
           if (
             generatorCmd !== undefined &&
