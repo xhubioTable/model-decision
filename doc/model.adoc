@@ -1,8 +1,2 @@
 == Model
-The model is the internal representation of a decision table.
-
-All the sections, rows and test cases are stored by IDs.
-So the model is not an array of arrays. This is harder to handle when
-looking through the code, but the big advantage is when the Model
-needs to be manipulated. Add new sections and test cases (row and columns).
-Or reordering some elements. 
+The model is the internal representation of a decision table. Rather than using a simple array of arrays, the model organizes all sections, rows, and test cases by unique IDs. This approach may be more complex to follow in the code, but it greatly simplifies operations such as adding new sections or test cases, reordering elements, and manipulating the model dynamically.

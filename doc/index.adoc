@@ -1,4 +1,6 @@
 
+include::./model.adoc[]
+
 include::./equivalence_class_table_layout.adoc[]
 
 include::./equivalence_class_table_sections.adoc[]
