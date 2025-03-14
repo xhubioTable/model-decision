@@ -1,12 +1,12 @@
-[**@tlink/model-decision**](../README.md)
+[**@xhubiotable/model-decision**](../README.md)
 
 ***
 
-[@tlink/model-decision](../globals.md) / ExecuteSectionDefinition
+[@xhubiotable/model-decision](../globals.md) / ExecuteSectionDefinition
 
 # Class: ExecuteSectionDefinition
 
-Defined in: src/sections/ExecuteSectionDefinition.ts:11
+Defined in: [src/sections/ExecuteSectionDefinition.ts:11](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/ExecuteSectionDefinition.ts#L11)
 
 Represents the execute section in a decision table.
 
@@ -24,7 +24,7 @@ As a single row section, it contains only the header row.
 
 > **new ExecuteSectionDefinition**(`opts`): [`ExecuteSectionDefinition`](ExecuteSectionDefinition.md)
 
-Defined in: src/sections/BaseSectionDefinition.ts:73
+Defined in: [src/sections/BaseSectionDefinition.ts:73](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L73)
 
 Constructs a new BaseSectionDefinition.
 
@@ -50,7 +50,7 @@ Options for initializing the section, including an optional name and header row 
 
 > `protected` **\_dataRows**: `string`[] = `[]`
 
-Defined in: src/sections/BaseSectionDefinition.ts:61
+Defined in: [src/sections/BaseSectionDefinition.ts:61](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L61)
 
 Stores the IDs of the data rows for this section.
 
@@ -64,7 +64,7 @@ Stores the IDs of the data rows for this section.
 
 > **headerRow**: `string`
 
-Defined in: src/sections/BaseSectionDefinition.ts:56
+Defined in: [src/sections/BaseSectionDefinition.ts:56](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L56)
 
 The identifier for the header row of the section.
 (FIXME: Consider renaming to headerRowId)
@@ -79,7 +79,7 @@ The identifier for the header row of the section.
 
 > **mandatory**: `boolean` = `false`
 
-Defined in: src/sections/BaseSingleRowSectionDefinition.ts:14
+Defined in: [src/sections/BaseSingleRowSectionDefinition.ts:14](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSingleRowSectionDefinition.ts#L14)
 
 Indicates whether the section is mandatory.
 For single row sections, this is set to false, meaning that a value is not required.
@@ -94,7 +94,7 @@ For single row sections, this is set to false, meaning that a value is not requi
 
 > **multiInstancesAllowed**: `boolean` = `false`
 
-Defined in: src/sections/BaseSingleRowSectionDefinition.ts:26
+Defined in: [src/sections/BaseSingleRowSectionDefinition.ts:26](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSingleRowSectionDefinition.ts#L26)
 
 Determines if multiple instances of this section type are allowed in the model.
 For single row sections, this is set to false, enforcing that only one instance exists.
@@ -109,7 +109,7 @@ For single row sections, this is set to false, enforcing that only one instance 
 
 > **multiple**: `boolean` = `false`
 
-Defined in: src/sections/BaseSingleRowSectionDefinition.ts:20
+Defined in: [src/sections/BaseSingleRowSectionDefinition.ts:20](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSingleRowSectionDefinition.ts#L20)
 
 Specifies whether the section can have multiple rows.
 For single row sections, this is set to false, indicating that only one row (the header row) is allowed.
@@ -124,7 +124,7 @@ For single row sections, this is set to false, indicating that only one row (the
 
 > `optional` **name**: `string`
 
-Defined in: src/sections/BaseSectionDefinition.ts:40
+Defined in: [src/sections/BaseSectionDefinition.ts:40](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L40)
 
 The name of this section.
 
@@ -138,7 +138,7 @@ The name of this section.
 
 > **sectionType**: [`SectionType`](../enumerations/SectionType.md) = `SectionType.EXECUTE_SECTION`
 
-Defined in: src/sections/ExecuteSectionDefinition.ts:15
+Defined in: [src/sections/ExecuteSectionDefinition.ts:15](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/ExecuteSectionDefinition.ts#L15)
 
 The section type, set to EXECUTE_SECTION.
 
@@ -154,7 +154,7 @@ The section type, set to EXECUTE_SECTION.
 
 > **get** **dataRows**(): `string`[]
 
-Defined in: src/sections/BaseSingleRowSectionDefinition.ts:36
+Defined in: [src/sections/BaseSingleRowSectionDefinition.ts:36](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSingleRowSectionDefinition.ts#L36)
 
 Gets the data rows of this section.
 
@@ -171,7 +171,7 @@ An array with the header row ID.
 
 > **set** **dataRows**(`rowId`): `void`
 
-Defined in: src/sections/BaseSingleRowSectionDefinition.ts:48
+Defined in: [src/sections/BaseSingleRowSectionDefinition.ts:48](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSingleRowSectionDefinition.ts#L48)
 
 Sets the data rows for this section.
 
@@ -200,7 +200,7 @@ The new value for data rows (ignored).
 
 > **createNewRow**(): `string`
 
-Defined in: src/sections/BaseSectionDefinition.ts:119
+Defined in: [src/sections/BaseSectionDefinition.ts:119](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L119)
 
 Creates a new data row for this section.
 
@@ -227,7 +227,7 @@ Error if the section does not support multiple rows.
 
 > **getRowIds**(): `string`[]
 
-Defined in: src/sections/BaseSectionDefinition.ts:136
+Defined in: [src/sections/BaseSectionDefinition.ts:136](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L136)
 
 Retrieves all row IDs associated with this section.
 
@@ -250,7 +250,7 @@ An array of row IDs.
 
 > **isHeader**(`rowid`): `boolean`
 
-Defined in: src/sections/BaseSectionDefinition.ts:106
+Defined in: [src/sections/BaseSectionDefinition.ts:106](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L106)
 
 Determines if a given row ID corresponds to the header row.
 
@@ -278,7 +278,7 @@ True if the provided row ID is the header row; otherwise, false.
 
 > **validate**(): [`SectionErrorInterface`](../interfaces/SectionErrorInterface.md)[]
 
-Defined in: src/sections/BaseSectionDefinition.ts:150
+Defined in: [src/sections/BaseSectionDefinition.ts:150](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L150)
 
 Validates the section definition.
 

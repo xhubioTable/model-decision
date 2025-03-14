@@ -1,12 +1,12 @@
-[**@tlink/model-decision**](../README.md)
+[**@xhubiotable/model-decision**](../README.md)
 
 ***
 
-[@tlink/model-decision](../globals.md) / SummarySectionDefinition
+[@xhubiotable/model-decision](../globals.md) / SummarySectionDefinition
 
 # Class: SummarySectionDefinition
 
-Defined in: src/sections/SummarySectionDefinition.ts:15
+Defined in: [src/sections/SummarySectionDefinition.ts:15](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/SummarySectionDefinition.ts#L15)
 
 Represents the summary section in a decision table.
 
@@ -28,7 +28,7 @@ additional data rows (it always uses the header row as its sole row).
 
 > **new SummarySectionDefinition**(`opts`): [`SummarySectionDefinition`](SummarySectionDefinition.md)
 
-Defined in: src/sections/BaseSectionDefinition.ts:73
+Defined in: [src/sections/BaseSectionDefinition.ts:73](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L73)
 
 Constructs a new BaseSectionDefinition.
 
@@ -54,7 +54,7 @@ Options for initializing the section, including an optional name and header row 
 
 > `protected` **\_dataRows**: `string`[] = `[]`
 
-Defined in: src/sections/BaseSectionDefinition.ts:61
+Defined in: [src/sections/BaseSectionDefinition.ts:61](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L61)
 
 Stores the IDs of the data rows for this section.
 
@@ -68,7 +68,7 @@ Stores the IDs of the data rows for this section.
 
 > `optional` **done**: `number` = `undefined`
 
-Defined in: src/sections/SummarySectionDefinition.ts:29
+Defined in: [src/sections/SummarySectionDefinition.ts:29](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/SummarySectionDefinition.ts#L29)
 
 The number of test combinations that are completed.
 
@@ -78,7 +78,7 @@ The number of test combinations that are completed.
 
 > **headerRow**: `string`
 
-Defined in: src/sections/BaseSectionDefinition.ts:56
+Defined in: [src/sections/BaseSectionDefinition.ts:56](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L56)
 
 The identifier for the header row of the section.
 (FIXME: Consider renaming to headerRowId)
@@ -93,7 +93,7 @@ The identifier for the header row of the section.
 
 > **mandatory**: `boolean` = `false`
 
-Defined in: src/sections/SummarySectionDefinition.ts:39
+Defined in: [src/sections/SummarySectionDefinition.ts:39](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/SummarySectionDefinition.ts#L39)
 
 Summary sections are not mandatory.
 
@@ -107,7 +107,7 @@ Summary sections are not mandatory.
 
 > **multiInstancesAllowed**: `boolean` = `false`
 
-Defined in: src/sections/SummarySectionDefinition.ts:44
+Defined in: [src/sections/SummarySectionDefinition.ts:44](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/SummarySectionDefinition.ts#L44)
 
 Only one instance of a summary section is allowed in a model.
 
@@ -121,7 +121,7 @@ Only one instance of a summary section is allowed in a model.
 
 > **multiple**: `boolean` = `true`
 
-Defined in: src/sections/BaseSectionDefinition.ts:50
+Defined in: [src/sections/BaseSectionDefinition.ts:50](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L50)
 
 Indicates whether the section supports multiple data rows.
 
@@ -135,7 +135,7 @@ Indicates whether the section supports multiple data rows.
 
 > `optional` **name**: `string`
 
-Defined in: src/sections/BaseSectionDefinition.ts:40
+Defined in: [src/sections/BaseSectionDefinition.ts:40](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L40)
 
 The name of this section.
 
@@ -149,7 +149,7 @@ The name of this section.
 
 > `optional` **percent**: `number` = `undefined`
 
-Defined in: src/sections/SummarySectionDefinition.ts:34
+Defined in: [src/sections/SummarySectionDefinition.ts:34](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/SummarySectionDefinition.ts#L34)
 
 The percentage of completed test combinations.
 
@@ -159,7 +159,7 @@ The percentage of completed test combinations.
 
 > **sectionType**: [`SectionType`](../enumerations/SectionType.md) = `SectionType.SUMMARY_SECTION`
 
-Defined in: src/sections/SummarySectionDefinition.ts:19
+Defined in: [src/sections/SummarySectionDefinition.ts:19](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/SummarySectionDefinition.ts#L19)
 
 The section type is set to SUMMARY_SECTION.
 
@@ -173,7 +173,7 @@ The section type is set to SUMMARY_SECTION.
 
 > `optional` **total**: `number` = `undefined`
 
-Defined in: src/sections/SummarySectionDefinition.ts:24
+Defined in: [src/sections/SummarySectionDefinition.ts:24](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/SummarySectionDefinition.ts#L24)
 
 The total number of test combinations.
 
@@ -185,7 +185,7 @@ The total number of test combinations.
 
 > **get** **dataRows**(): `string`[]
 
-Defined in: src/sections/SummarySectionDefinition.ts:52
+Defined in: [src/sections/SummarySectionDefinition.ts:52](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/SummarySectionDefinition.ts#L52)
 
 Getter for the data row IDs of this section.
 For a summary section, this returns the underlying data rows stored in the base class.
@@ -200,7 +200,7 @@ An array of row IDs.
 
 > **set** **dataRows**(`value`): `void`
 
-Defined in: src/sections/SummarySectionDefinition.ts:61
+Defined in: [src/sections/SummarySectionDefinition.ts:61](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/SummarySectionDefinition.ts#L61)
 
 Setter for the data row IDs of this section.
 
@@ -226,7 +226,7 @@ An array of row IDs to set.
 
 > **createDataRow**(): `undefined`
 
-Defined in: src/sections/SummarySectionDefinition.ts:73
+Defined in: [src/sections/SummarySectionDefinition.ts:73](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/SummarySectionDefinition.ts#L73)
 
 Attempts to create a new data row for this section.
 
@@ -245,7 +245,7 @@ Always returns undefined.
 
 > **createNewRow**(): `string`
 
-Defined in: src/sections/BaseSectionDefinition.ts:119
+Defined in: [src/sections/BaseSectionDefinition.ts:119](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L119)
 
 Creates a new data row for this section.
 
@@ -272,7 +272,7 @@ Error if the section does not support multiple rows.
 
 > **getRowIds**(): `string`[]
 
-Defined in: src/sections/SummarySectionDefinition.ts:84
+Defined in: [src/sections/SummarySectionDefinition.ts:84](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/SummarySectionDefinition.ts#L84)
 
 Retrieves all row IDs associated with this section.
 
@@ -294,7 +294,7 @@ An array containing just the header row ID.
 
 > **isHeader**(`rowid`): `boolean`
 
-Defined in: src/sections/BaseSectionDefinition.ts:106
+Defined in: [src/sections/BaseSectionDefinition.ts:106](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L106)
 
 Determines if a given row ID corresponds to the header row.
 
@@ -322,7 +322,7 @@ True if the provided row ID is the header row; otherwise, false.
 
 > **validate**(): [`SectionErrorInterface`](../interfaces/SectionErrorInterface.md)[]
 
-Defined in: src/sections/BaseSectionDefinition.ts:150
+Defined in: [src/sections/BaseSectionDefinition.ts:150](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L150)
 
 Validates the section definition.
 

@@ -1,8 +1,8 @@
-[**@tlink/model-decision**](README.md)
+[**@xhubiotable/model-decision**](README.md)
 
 ***
 
-# @tlink/model-decision
+# @xhubiotable/model-decision
 
 ## Enumerations
 

@@ -1,4 +1,4 @@
-import { MetaTable } from '@tlink/model'
+import { MetaTable } from '@xhubiotable/model'
 import { TestcaseDefinitionDecision } from './TestcaseDefinitionDecision'
 import {
   SectionErrorInterface,
@@ -16,7 +16,7 @@ import { FilterSectionDefinition } from './sections/FilterSectionDefinition'
 import { TagSectionDefinition } from './sections/TagSectionDefinition'
 import { MultiRowSectionDefinition } from './sections/MultiRowSectionDefinition'
 import { TableDecisionInterface } from './interface/TableDecisionInterface'
-import { LoggerInterface } from '@tlink/logger'
+import { LoggerInterface } from '@xhubiotable/logger'
 
 export interface TableDecisionOptions {
   /** The file name of the table */

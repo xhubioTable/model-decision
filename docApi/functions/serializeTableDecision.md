@@ -1,14 +1,14 @@
-[**@tlink/model-decision**](../README.md)
+[**@xhubiotable/model-decision**](../README.md)
 
 ***
 
-[@tlink/model-decision](../globals.md) / serializeTableDecision
+[@xhubiotable/model-decision](../globals.md) / serializeTableDecision
 
 # Function: serializeTableDecision()
 
 > **serializeTableDecision**(`table`): `object`
 
-Defined in: src/serializer/serializeTable.ts:5
+Defined in: [src/serializer/serializeTable.ts:5](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/serializer/serializeTable.ts#L5)
 
 ## Parameters
 

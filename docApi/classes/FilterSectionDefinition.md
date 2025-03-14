@@ -1,12 +1,12 @@
-[**@tlink/model-decision**](../README.md)
+[**@xhubiotable/model-decision**](../README.md)
 
 ***
 
-[@tlink/model-decision](../globals.md) / FilterSectionDefinition
+[@xhubiotable/model-decision](../globals.md) / FilterSectionDefinition
 
 # Class: FilterSectionDefinition
 
-Defined in: src/sections/FilterSectionDefinition.ts:11
+Defined in: [src/sections/FilterSectionDefinition.ts:11](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/FilterSectionDefinition.ts#L11)
 
 Represents a filter section definition in a decision table.
 
@@ -24,7 +24,7 @@ filter expressions, and optional comments for each row in the section.
 
 > **new FilterSectionDefinition**(`opts`): [`FilterSectionDefinition`](FilterSectionDefinition.md)
 
-Defined in: src/sections/BaseSectionDefinition.ts:73
+Defined in: [src/sections/BaseSectionDefinition.ts:73](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L73)
 
 Constructs a new BaseSectionDefinition.
 
@@ -50,7 +50,7 @@ Options for initializing the section, including an optional name and header row 
 
 > `protected` **\_dataRows**: `string`[] = `[]`
 
-Defined in: src/sections/BaseSectionDefinition.ts:61
+Defined in: [src/sections/BaseSectionDefinition.ts:61](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L61)
 
 Stores the IDs of the data rows for this section.
 
@@ -64,7 +64,7 @@ Stores the IDs of the data rows for this section.
 
 > **comments**: `Record`\<`string`, `string`\> = `{}`
 
-Defined in: src/sections/FilterSectionDefinition.ts:30
+Defined in: [src/sections/FilterSectionDefinition.ts:30](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/FilterSectionDefinition.ts#L30)
 
 Maps row IDs to comment entries.
 
@@ -74,7 +74,7 @@ Maps row IDs to comment entries.
 
 > **expressions**: `Record`\<`string`, `string`\> = `{}`
 
-Defined in: src/sections/FilterSectionDefinition.ts:25
+Defined in: [src/sections/FilterSectionDefinition.ts:25](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/FilterSectionDefinition.ts#L25)
 
 Maps row IDs to the filter expressions.
 
@@ -84,7 +84,7 @@ Maps row IDs to the filter expressions.
 
 > **filterProcessorNames**: `Record`\<`string`, `string`\> = `{}`
 
-Defined in: src/sections/FilterSectionDefinition.ts:20
+Defined in: [src/sections/FilterSectionDefinition.ts:20](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/FilterSectionDefinition.ts#L20)
 
 Maps row IDs to the names of the filter processors.
 
@@ -94,7 +94,7 @@ Maps row IDs to the names of the filter processors.
 
 > **headerRow**: `string`
 
-Defined in: src/sections/BaseSectionDefinition.ts:56
+Defined in: [src/sections/BaseSectionDefinition.ts:56](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L56)
 
 The identifier for the header row of the section.
 (FIXME: Consider renaming to headerRowId)
@@ -109,7 +109,7 @@ The identifier for the header row of the section.
 
 > **mandatory**: `boolean` = `false`
 
-Defined in: src/sections/BaseSectionDefinition.ts:45
+Defined in: [src/sections/BaseSectionDefinition.ts:45](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L45)
 
 Indicates whether the section is mandatory (i.e., must have at least one value).
 
@@ -123,7 +123,7 @@ Indicates whether the section is mandatory (i.e., must have at least one value).
 
 > **multiInstancesAllowed**: `boolean` = `true`
 
-Defined in: src/sections/BaseSectionDefinition.ts:66
+Defined in: [src/sections/BaseSectionDefinition.ts:66](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L66)
 
 If set to false, only one instance of this section type is allowed per model.
 
@@ -137,7 +137,7 @@ If set to false, only one instance of this section type is allowed per model.
 
 > **multiple**: `boolean` = `true`
 
-Defined in: src/sections/BaseSectionDefinition.ts:50
+Defined in: [src/sections/BaseSectionDefinition.ts:50](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L50)
 
 Indicates whether the section supports multiple data rows.
 
@@ -151,7 +151,7 @@ Indicates whether the section supports multiple data rows.
 
 > `optional` **name**: `string`
 
-Defined in: src/sections/BaseSectionDefinition.ts:40
+Defined in: [src/sections/BaseSectionDefinition.ts:40](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L40)
 
 The name of this section.
 
@@ -165,7 +165,7 @@ The name of this section.
 
 > **sectionType**: [`SectionType`](../enumerations/SectionType.md) = `SectionType.FILTER_SECTION`
 
-Defined in: src/sections/FilterSectionDefinition.ts:15
+Defined in: [src/sections/FilterSectionDefinition.ts:15](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/FilterSectionDefinition.ts#L15)
 
 The section type, set to FILTER_SECTION.
 
@@ -181,7 +181,7 @@ The section type, set to FILTER_SECTION.
 
 > **get** **dataRows**(): `string`[]
 
-Defined in: src/sections/FilterSectionDefinition.ts:36
+Defined in: [src/sections/FilterSectionDefinition.ts:36](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/FilterSectionDefinition.ts#L36)
 
 Getter for the data row IDs of this filter section.
 
@@ -195,7 +195,7 @@ An array containing the row IDs.
 
 > **set** **dataRows**(`value`): `void`
 
-Defined in: src/sections/FilterSectionDefinition.ts:44
+Defined in: [src/sections/FilterSectionDefinition.ts:44](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/FilterSectionDefinition.ts#L44)
 
 Setter for the data row IDs of this filter section.
 
@@ -221,7 +221,7 @@ An array of row IDs.
 
 > **createNewRow**(): `string`
 
-Defined in: src/sections/BaseSectionDefinition.ts:119
+Defined in: [src/sections/BaseSectionDefinition.ts:119](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L119)
 
 Creates a new data row for this section.
 
@@ -248,7 +248,7 @@ Error if the section does not support multiple rows.
 
 > **getRowIds**(): `string`[]
 
-Defined in: src/sections/BaseSectionDefinition.ts:136
+Defined in: [src/sections/BaseSectionDefinition.ts:136](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L136)
 
 Retrieves all row IDs associated with this section.
 
@@ -271,7 +271,7 @@ An array of row IDs.
 
 > **isHeader**(`rowid`): `boolean`
 
-Defined in: src/sections/BaseSectionDefinition.ts:106
+Defined in: [src/sections/BaseSectionDefinition.ts:106](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L106)
 
 Determines if a given row ID corresponds to the header row.
 
@@ -299,7 +299,7 @@ True if the provided row ID is the header row; otherwise, false.
 
 > **validate**(): [`SectionErrorInterface`](../interfaces/SectionErrorInterface.md)[]
 
-Defined in: src/sections/FilterSectionDefinition.ts:58
+Defined in: [src/sections/FilterSectionDefinition.ts:58](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/FilterSectionDefinition.ts#L58)
 
 Validates this filter section definition.
 

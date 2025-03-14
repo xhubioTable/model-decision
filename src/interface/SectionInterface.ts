@@ -1,4 +1,4 @@
-import { TestcaseDefinitionInterface } from '@tlink/model'
+import { TestcaseDefinitionInterface } from '@xhubiotable/model'
 import { SectionType } from '../sections/SectionTypeEnum'
 
 /**

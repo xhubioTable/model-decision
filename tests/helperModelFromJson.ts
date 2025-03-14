@@ -12,7 +12,7 @@
 //   TableDecision,
 //   TestcaseDefinitionDecision
 // } from '../src/index'
-// import { LoggerMemory } from '@tlink/logger'
+// import { LoggerMemory } from '@xhubiotable/logger'
 
 // /**
 //  * Creates a real model from a serialized JSON Object.

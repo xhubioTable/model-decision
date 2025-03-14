@@ -1,7 +1,7 @@
 import path from 'node:path'
 
 import { TableDecision } from '../src/index'
-import { LoggerMemory } from '@tlink/logger'
+import { LoggerMemory } from '@xhubiotable/logger'
 import { deserializeTableFromFile } from '../src/deserializer/deserializeTable'
 
 const FIXTURES = path.join(__dirname, 'fixtures', 'TableDecision')

@@ -1,4 +1,4 @@
-import { LoggerMemory } from '@tlink/logger'
+import { LoggerMemory } from '@xhubiotable/logger'
 import { TableDecision } from '../src/index'
 
 const TEST_DATA: [string, string[], string][] = [

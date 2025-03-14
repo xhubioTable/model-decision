@@ -1,12 +1,12 @@
-[**@tlink/model-decision**](../README.md)
+[**@xhubiotable/model-decision**](../README.md)
 
 ***
 
-[@tlink/model-decision](../globals.md) / TableDecision
+[@xhubiotable/model-decision](../globals.md) / TableDecision
 
 # Class: TableDecision
 
-Defined in: src/TableDecision.ts:38
+Defined in: [src/TableDecision.ts:38](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TableDecision.ts#L38)
 
 Implementation of a decision table model.
 
@@ -25,7 +25,7 @@ test cases for execution, calculate summary information, validate the model, and
 
 > **new TableDecision**(`opts`): [`TableDecision`](TableDecision.md)
 
-Defined in: src/TableDecision.ts:82
+Defined in: [src/TableDecision.ts:82](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TableDecision.ts#L82)
 
 Constructs a new instance of TableDecision.
 
@@ -47,7 +47,7 @@ Options for initializing the table, including fileName, tableName, and logger.
 
 > **fileName**: `string`
 
-Defined in: src/TableDecision.ts:46
+Defined in: [src/TableDecision.ts:46](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TableDecision.ts#L46)
 
 The file name from which the table is loaded
 
@@ -61,7 +61,7 @@ The file name from which the table is loaded
 
 > **logger**: `LoggerInterface`
 
-Defined in: src/TableDecision.ts:43
+Defined in: [src/TableDecision.ts:43](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TableDecision.ts#L43)
 
 Logger instance used for logging operations
 
@@ -75,7 +75,7 @@ Logger instance used for logging operations
 
 > **sectionNames**: `Set`\<`string`\>
 
-Defined in: src/TableDecision.ts:76
+Defined in: [src/TableDecision.ts:76](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TableDecision.ts#L76)
 
 Set to store unique keys for sections (combination of section type and section name)
 to ensure that section names are unique within the same type.
@@ -90,7 +90,7 @@ to ensure that section names are unique within the same type.
 
 > **sectionOrder**: `string`[] = `[]`
 
-Defined in: src/TableDecision.ts:61
+Defined in: [src/TableDecision.ts:61](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TableDecision.ts#L61)
 
 Array of section IDs representing the order of sections in the table
 
@@ -104,7 +104,7 @@ Array of section IDs representing the order of sections in the table
 
 > **sections**: `Record`\<`string`, [`SectionInterface`](../interfaces/SectionInterface.md)\> = `{}`
 
-Defined in: src/TableDecision.ts:58
+Defined in: [src/TableDecision.ts:58](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TableDecision.ts#L58)
 
 Mapping of section IDs to section definitions
 
@@ -118,7 +118,7 @@ Mapping of section IDs to section definitions
 
 > **singleCheck**: `Map`\<[`SectionType`](../enumerations/SectionType.md), [`SectionInterface`](../interfaces/SectionInterface.md)\>
 
-Defined in: src/TableDecision.ts:67
+Defined in: [src/TableDecision.ts:67](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TableDecision.ts#L67)
 
 Map to enforce that sections which should exist only once are not duplicated.
 The key is the section type and the value is the corresponding section definition.
@@ -133,7 +133,7 @@ The key is the section type and the value is the corresponding section definitio
 
 > **tableName**: `string`
 
-Defined in: src/TableDecision.ts:49
+Defined in: [src/TableDecision.ts:49](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TableDecision.ts#L49)
 
 The human-readable name of the table
 
@@ -147,7 +147,7 @@ The human-readable name of the table
 
 > `readonly` **tableType**: `string` = `TABLE_TYPE_DECISION_TABLE`
 
-Defined in: src/TableDecision.ts:40
+Defined in: [src/TableDecision.ts:40](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TableDecision.ts#L40)
 
 The table type, set to the constant TABLE_TYPE_DECISION_TABLE
 
@@ -161,7 +161,7 @@ The table type, set to the constant TABLE_TYPE_DECISION_TABLE
 
 > **testcaseOrder**: `string`[] = `[]`
 
-Defined in: src/TableDecision.ts:52
+Defined in: [src/TableDecision.ts:52](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TableDecision.ts#L52)
 
 Array of test case IDs defining the order in which test cases are processed
 
@@ -175,7 +175,7 @@ Array of test case IDs defining the order in which test cases are processed
 
 > **testcases**: `Record`\<`string`, [`TestcaseDefinitionDecision`](TestcaseDefinitionDecision.md)\> = `{}`
 
-Defined in: src/TableDecision.ts:55
+Defined in: [src/TableDecision.ts:55](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TableDecision.ts#L55)
 
 Mapping of test case IDs to their TestcaseDefinitionDecision objects
 
@@ -191,7 +191,7 @@ Mapping of test case IDs to their TestcaseDefinitionDecision objects
 
 > **get** **tableMeta**(): `MetaTable`
 
-Defined in: src/TableDecision.ts:92
+Defined in: [src/TableDecision.ts:92](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TableDecision.ts#L92)
 
 Returns the meta-information of the table.
 
@@ -213,7 +213,7 @@ Read-only meta information about the table.
 
 > **addNewExecuteSection**(`name`, `position`?): [`ExecuteSectionDefinition`](ExecuteSectionDefinition.md)
 
-Defined in: src/TableDecision.ts:536
+Defined in: [src/TableDecision.ts:536](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TableDecision.ts#L536)
 
 Adds a new ExecuteSection to the table.
 Instantiates a new ExecuteSectionDefinition and adds it via the addNewSection helper.
@@ -245,7 +245,7 @@ The newly created ExecuteSectionDefinition.
 
 > **addNewFieldSection**(`name`, `position`?): [`FieldSectionDefinition`](FieldSectionDefinition.md)
 
-Defined in: src/TableDecision.ts:438
+Defined in: [src/TableDecision.ts:438](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TableDecision.ts#L438)
 
 Adds a new FieldSection to the table.
 Instantiates a new FieldSectionDefinition and adds it via the addNewSection helper.
@@ -276,7 +276,7 @@ The newly created FieldSectionDefinition.
 
 > **addNewFilterSection**(`name`, `position`?): [`FilterSectionDefinition`](FilterSectionDefinition.md)
 
-Defined in: src/TableDecision.ts:483
+Defined in: [src/TableDecision.ts:483](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TableDecision.ts#L483)
 
 Adds a new FilterSection to the table.
 Instantiates a new FilterSectionDefinition and adds it via the addNewSection helper.
@@ -307,7 +307,7 @@ The newly created FilterSectionDefinition.
 
 > **addNewGeneratorSwitchSection**(`name`, `position`?): [`GeneratorSwitchSectionDefinition`](GeneratorSwitchSectionDefinition.md)
 
-Defined in: src/TableDecision.ts:500
+Defined in: [src/TableDecision.ts:500](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TableDecision.ts#L500)
 
 Adds a new GeneratorSwitchSection to the table.
 Instantiates a new GeneratorSwitchSectionDefinition and adds it via the addNewSection helper.
@@ -338,7 +338,7 @@ The newly created GeneratorSwitchSectionDefinition.
 
 > **addNewMultiplicitySection**(`name`, `position`?): [`MultiplicitySectionDefinition`](MultiplicitySectionDefinition.md)
 
-Defined in: src/TableDecision.ts:572
+Defined in: [src/TableDecision.ts:572](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TableDecision.ts#L572)
 
 Adds a new MultiplicitySection to the table.
 Instantiates a new MultiplicitySectionDefinition and adds it via the addNewSection helper.
@@ -370,7 +370,7 @@ The newly created MultiplicitySectionDefinition.
 
 > **addNewMultiRowSection**(`name`, `position`?): [`MultiRowSectionDefinition`](MultiRowSectionDefinition.md)
 
-Defined in: src/TableDecision.ts:452
+Defined in: [src/TableDecision.ts:452](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TableDecision.ts#L452)
 
 Adds a new MultiRowSection to the table.
 Instantiates a new MultiRowSectionDefinition and adds it via the addNewSection helper.
@@ -401,7 +401,7 @@ The newly created MultiRowSectionDefinition.
 
 > **addNewNeverExecuteSection**(`name`, `position`?): [`NeverExecuteSectionDefinition`](NeverExecuteSectionDefinition.md)
 
-Defined in: src/TableDecision.ts:554
+Defined in: [src/TableDecision.ts:554](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TableDecision.ts#L554)
 
 Adds a new NeverExecuteSection to the table.
 Instantiates a new NeverExecuteSectionDefinition and adds it via the addNewSection helper.
@@ -433,7 +433,7 @@ The newly created NeverExecuteSectionDefinition.
 
 > **addNewSummarySection**(`name`, `position`?): [`SummarySectionDefinition`](SummarySectionDefinition.md)
 
-Defined in: src/TableDecision.ts:518
+Defined in: [src/TableDecision.ts:518](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TableDecision.ts#L518)
 
 Adds a new SummarySection to the table.
 Instantiates a new SummarySectionDefinition and adds it via the addNewSection helper.
@@ -465,7 +465,7 @@ The newly created SummarySectionDefinition.
 
 > **addNewTagSection**(`name`, `position`?): [`TagSectionDefinition`](TagSectionDefinition.md)
 
-Defined in: src/TableDecision.ts:469
+Defined in: [src/TableDecision.ts:469](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TableDecision.ts#L469)
 
 Adds a new TagSection to the table.
 Instantiates a new TagSectionDefinition and adds it via the addNewSection helper.
@@ -496,7 +496,7 @@ The newly created TagSectionDefinition.
 
 > **addNewTestcase**(`name`, `position`?): [`TestcaseDefinitionDecision`](TestcaseDefinitionDecision.md)
 
-Defined in: src/TableDecision.ts:406
+Defined in: [src/TableDecision.ts:406](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TableDecision.ts#L406)
 
 Adds a new test case to the table.
 Creates a new TestcaseDefinitionDecision instance with the current table meta-information,
@@ -528,7 +528,7 @@ The newly created TestcaseDefinitionDecision instance.
 
 > **calculate**(): `void`
 
-Defined in: src/TableDecision.ts:192
+Defined in: [src/TableDecision.ts:192](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TableDecision.ts#L192)
 
 Calculates the summary for each section.
 This method processes the data rows of each section, updates the section values,
@@ -552,7 +552,7 @@ Error if the summary section is missing.
 
 > **getTestcaseForName**(`testcaseName`): [`TestcaseDefinitionDecision`](TestcaseDefinitionDecision.md)
 
-Defined in: src/TableDecision.ts:107
+Defined in: [src/TableDecision.ts:107](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TableDecision.ts#L107)
 
 Retrieves the test case definition for a given test case name.
 
@@ -588,7 +588,7 @@ Error if no matching test case is found.
 
 > **getTestcasesForExecution**(): `Generator`\<[`TestcaseDefinitionDecision`](TestcaseDefinitionDecision.md), `void`, `void`\>
 
-Defined in: src/TableDecision.ts:125
+Defined in: [src/TableDecision.ts:125](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TableDecision.ts#L125)
 
 Generator function that yields all test cases intended for execution.
 For each test case marked for execution, the method clones the test case definition.
@@ -610,7 +610,7 @@ A generator yielding cloned TestcaseDefinitionDecision objects.
 
 > **processRanges**(`testcaseName`): `string`[]
 
-Defined in: src/TableDecision.ts:152
+Defined in: [src/TableDecision.ts:152](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TableDecision.ts#L152)
 
 Parses a test case name or range and returns an array of individual test case names.
 
@@ -641,7 +641,7 @@ An array of test case names.
 
 > **validate**(): [`SectionErrorInterface`](../interfaces/SectionErrorInterface.md)[]
 
-Defined in: src/TableDecision.ts:269
+Defined in: [src/TableDecision.ts:269](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TableDecision.ts#L269)
 
 Validates the decision table model.
 

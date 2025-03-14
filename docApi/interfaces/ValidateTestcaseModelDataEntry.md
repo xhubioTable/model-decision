@@ -1,12 +1,12 @@
-[**@tlink/model-decision**](../README.md)
+[**@xhubiotable/model-decision**](../README.md)
 
 ***
 
-[@tlink/model-decision](../globals.md) / ValidateTestcaseModelDataEntry
+[@xhubiotable/model-decision](../globals.md) / ValidateTestcaseModelDataEntry
 
 # Interface: ValidateTestcaseModelDataEntry
 
-Defined in: src/validate/validateModelInterface.ts:72
+Defined in: [src/validate/validateModelInterface.ts:72](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/validate/validateModelInterface.ts#L72)
 
 Represents the data entry for a particular section within a test case.
 It includes the row IDs for that section, the parent section ID,
@@ -18,7 +18,7 @@ and the computed binary values (both as numbers and strings).
 
 > **parentSectionId**: `string`
 
-Defined in: src/validate/validateModelInterface.ts:81
+Defined in: [src/validate/validateModelInterface.ts:81](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/validate/validateModelInterface.ts#L81)
 
 The ID of the parent section.
 
@@ -28,7 +28,7 @@ The ID of the parent section.
 
 > **rows**: `string`[]
 
-Defined in: src/validate/validateModelInterface.ts:76
+Defined in: [src/validate/validateModelInterface.ts:76](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/validate/validateModelInterface.ts#L76)
 
 The list of row IDs for the section.
 
@@ -38,7 +38,7 @@ The list of row IDs for the section.
 
 > `optional` **val**: `number` \| `number`[]
 
-Defined in: src/validate/validateModelInterface.ts:88
+Defined in: [src/validate/validateModelInterface.ts:88](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/validate/validateModelInterface.ts#L88)
 
 The computed value(s) for the section.
 If the section has more than 31 rows, the value is split into an array of numbers.
@@ -50,6 +50,6 @@ The value is derived from a binary string (e.g., "011010").
 
 > `optional` **valStr**: `string` \| `string`[]
 
-Defined in: src/validate/validateModelInterface.ts:93
+Defined in: [src/validate/validateModelInterface.ts:93](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/validate/validateModelInterface.ts#L93)
 
 The binary string representation of the computed value(s).

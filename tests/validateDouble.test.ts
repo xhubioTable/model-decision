@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
-import { LoggerMemory } from '@tlink/logger'
+import { LoggerMemory } from '@xhubiotable/logger'
 
 import { TableDecision } from '../src/index'
 import {

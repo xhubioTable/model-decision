@@ -7,7 +7,7 @@ import {
   combineTestcasesIsDisjunct,
   combineTestcasesSub
 } from '../src/validate/combineTestcases'
-import { LoggerMemory } from '@tlink/logger'
+import { LoggerMemory } from '@xhubiotable/logger'
 import { ValidateTestcaseModel } from '../src/validate/validateModelInterface'
 
 const FIXTURES = path.join(__dirname, 'fixtures', 'validateMissing')

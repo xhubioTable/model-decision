@@ -1,14 +1,14 @@
-[**@tlink/model-decision**](../README.md)
+[**@xhubiotable/model-decision**](../README.md)
 
 ***
 
-[@tlink/model-decision](../globals.md) / findDouble
+[@xhubiotable/model-decision](../globals.md) / findDouble
 
 # Function: findDouble()
 
 > **findDouble**(`table`): `object`[]
 
-Defined in: src/validate/validateDouble.ts:19
+Defined in: [src/validate/validateDouble.ts:19](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/validate/validateDouble.ts#L19)
 
 Finds duplicate (double) test case definitions in the given decision table.
 

@@ -1,12 +1,12 @@
-[**@tlink/model-decision**](../README.md)
+[**@xhubiotable/model-decision**](../README.md)
 
 ***
 
-[@tlink/model-decision](../globals.md) / TestcaseDefinitionDecision
+[@xhubiotable/model-decision](../globals.md) / TestcaseDefinitionDecision
 
 # Class: TestcaseDefinitionDecision
 
-Defined in: src/TestcaseDefinitionDecision.ts:63
+Defined in: [src/TestcaseDefinitionDecision.ts:63](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TestcaseDefinitionDecision.ts#L63)
 
 A test case is one column in the test case part. This is the implementation for the decision table.
 
@@ -20,7 +20,7 @@ A test case is one column in the test case part. This is the implementation for 
 
 > **new TestcaseDefinitionDecision**(`opts`): [`TestcaseDefinitionDecision`](TestcaseDefinitionDecision.md)
 
-Defined in: src/TestcaseDefinitionDecision.ts:98
+Defined in: [src/TestcaseDefinitionDecision.ts:98](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TestcaseDefinitionDecision.ts#L98)
 
 #### Parameters
 
@@ -38,7 +38,7 @@ Defined in: src/TestcaseDefinitionDecision.ts:98
 
 > **data**: `Record`\<`string`, `string`\>
 
-Defined in: src/TestcaseDefinitionDecision.ts:87
+Defined in: [src/TestcaseDefinitionDecision.ts:87](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TestcaseDefinitionDecision.ts#L87)
 
 The data for this testcase.
  In case of a decision table, a test case is a column. All the data in this
@@ -54,7 +54,7 @@ column is stored by an identifier. The identifier is a value in the row.
 
 > **execute**: `boolean` = `true`
 
-Defined in: src/TestcaseDefinitionDecision.ts:77
+Defined in: [src/TestcaseDefinitionDecision.ts:77](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TestcaseDefinitionDecision.ts#L77)
 
 Should this test case be executed or is it only for a reference
 
@@ -68,7 +68,7 @@ Should this test case be executed or is it only for a reference
 
 > **id**: `string`
 
-Defined in: src/TestcaseDefinitionDecision.ts:65
+Defined in: [src/TestcaseDefinitionDecision.ts:65](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TestcaseDefinitionDecision.ts#L65)
 
 The id of this test case. This could be any unique value
 
@@ -82,7 +82,7 @@ The id of this test case. This could be any unique value
 
 > **isPartOfCompletion**: `boolean` = `true`
 
-Defined in: src/TestcaseDefinitionDecision.ts:93
+Defined in: [src/TestcaseDefinitionDecision.ts:93](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TestcaseDefinitionDecision.ts#L93)
 
 Defines if this testcase is included into the completness computation
 
@@ -92,7 +92,7 @@ Defines if this testcase is included into the completness computation
 
 > **logger**: `LoggerInterface`
 
-Defined in: src/TestcaseDefinitionDecision.ts:96
+Defined in: [src/TestcaseDefinitionDecision.ts:96](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TestcaseDefinitionDecision.ts#L96)
 
 The logger for this model
 
@@ -106,7 +106,7 @@ The logger for this model
 
 > **multiplicity**: `number` = `1`
 
-Defined in: src/TestcaseDefinitionDecision.ts:74
+Defined in: [src/TestcaseDefinitionDecision.ts:74](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TestcaseDefinitionDecision.ts#L74)
 
 Defines how often this test case should be created. Any number greater than 0
 
@@ -120,7 +120,7 @@ Defines how often this test case should be created. Any number greater than 0
 
 > **neverExecute**: `boolean` = `false`
 
-Defined in: src/TestcaseDefinitionDecision.ts:80
+Defined in: [src/TestcaseDefinitionDecision.ts:80](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TestcaseDefinitionDecision.ts#L80)
 
 This means that a test case should not be executed if a referenced test case has this set to true
 
@@ -134,7 +134,7 @@ This means that a test case should not be executed if a referenced test case has
 
 > **table**: [`TableDecisionInterface`](../interfaces/TableDecisionInterface.md)
 
-Defined in: src/TestcaseDefinitionDecision.ts:90
+Defined in: [src/TestcaseDefinitionDecision.ts:90](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TestcaseDefinitionDecision.ts#L90)
 
 A back reference to the table containing this test case
 
@@ -148,7 +148,7 @@ A back reference to the table containing this test case
 
 > **tableMeta**: `MetaTable`
 
-Defined in: src/TestcaseDefinitionDecision.ts:68
+Defined in: [src/TestcaseDefinitionDecision.ts:68](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TestcaseDefinitionDecision.ts#L68)
 
 Some meta information for this test case
 
@@ -158,7 +158,7 @@ Some meta information for this test case
 
 > **testcaseName**: `string`
 
-Defined in: src/TestcaseDefinitionDecision.ts:71
+Defined in: [src/TestcaseDefinitionDecision.ts:71](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TestcaseDefinitionDecision.ts#L71)
 
 The name of the test case
 
@@ -170,7 +170,7 @@ The name of the test case
 
 > **get** **testcaseMeta**(): `MetaTestcase`
 
-Defined in: src/TestcaseDefinitionDecision.ts:123
+Defined in: [src/TestcaseDefinitionDecision.ts:123](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TestcaseDefinitionDecision.ts#L123)
 
 Read-only meta-information for this test case.
 Contains details inherited from the table (e.g., test case name).
@@ -189,7 +189,7 @@ Contains details inherited from the table (e.g., test case name).
 
 > **calculate**(`sectionRowId`, `rowIds`): `number`
 
-Defined in: src/TestcaseDefinitionDecision.ts:536
+Defined in: [src/TestcaseDefinitionDecision.ts:536](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TestcaseDefinitionDecision.ts#L536)
 
 Claculates how many entries per section are defined
 
@@ -219,7 +219,7 @@ The number of entries
 
 > **clone**(): [`TestcaseDefinitionDecision`](TestcaseDefinitionDecision.md)
 
-Defined in: src/TestcaseDefinitionDecision.ts:134
+Defined in: [src/TestcaseDefinitionDecision.ts:134](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TestcaseDefinitionDecision.ts#L134)
 
 Clone the current testcase definition.
 
@@ -235,7 +235,7 @@ A clone of this test case definition.
 
 > **createFilter**(): `FilterInterface`[]
 
-Defined in: src/TestcaseDefinitionDecision.ts:181
+Defined in: [src/TestcaseDefinitionDecision.ts:181](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TestcaseDefinitionDecision.ts#L181)
 
 Returns all the filter found in this test case
 
@@ -255,7 +255,7 @@ An Array with all the found filter
 
 > **createGeneratorSwitches**(): `string`[]
 
-Defined in: src/TestcaseDefinitionDecision.ts:216
+Defined in: [src/TestcaseDefinitionDecision.ts:216](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TestcaseDefinitionDecision.ts#L216)
 
 Returns a list of generator names which should not be executed
 
@@ -275,7 +275,7 @@ An Array with alle the generator names to be switched off for this test case
 
 > **createTags**(): `string`[]
 
-Defined in: src/TestcaseDefinitionDecision.ts:155
+Defined in: [src/TestcaseDefinitionDecision.ts:155](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TestcaseDefinitionDecision.ts#L155)
 
 Returns all the tag values found in this test case
 
@@ -295,7 +295,7 @@ An Array with all the found tag values
 
 > **createTodos**(): `TestcaseTodosInterface`
 
-Defined in: src/TestcaseDefinitionDecision.ts:267
+Defined in: [src/TestcaseDefinitionDecision.ts:267](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TestcaseDefinitionDecision.ts#L267)
 
 Create all the todos for this testcase definition
 
@@ -315,7 +315,7 @@ An object with all the todos by there type
 
 > **getValue**(`rowId`): `string`
 
-Defined in: src/TestcaseDefinitionDecision.ts:569
+Defined in: [src/TestcaseDefinitionDecision.ts:569](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TestcaseDefinitionDecision.ts#L569)
 
 Set a value for a row in this testcase
 
@@ -339,7 +339,7 @@ The value of this row id
 
 > **setValue**(`rowId`, `value`): `void`
 
-Defined in: src/TestcaseDefinitionDecision.ts:553
+Defined in: [src/TestcaseDefinitionDecision.ts:553](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TestcaseDefinitionDecision.ts#L553)
 
 Set a value for a row in this testcase
 
@@ -367,7 +367,7 @@ The value to be set
 
 > **validate**(`section`): [`SectionErrorInterface`](../interfaces/SectionErrorInterface.md)[]
 
-Defined in: src/TestcaseDefinitionDecision.ts:582
+Defined in: [src/TestcaseDefinitionDecision.ts:582](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/TestcaseDefinitionDecision.ts#L582)
 
 Validates this section definition.
 - A testcase must have a name

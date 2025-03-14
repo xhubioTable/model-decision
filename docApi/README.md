@@ -1,4 +1,4 @@
-**@tlink/model-decision**
+**@xhubiotable/model-decision**
 
 ***
 
@@ -13,10 +13,7 @@ model dynamically.
 
 # Layout Equivalence Class Table
 
-<figure>
-<img src="images/model-decision/table.jpg" alt="table" />
-<figcaption>Example table</figcaption>
-</figure>
+![Example table](images/model-decision/table.jpg)
 
 The example above shows an equivalence class table where the column
 order is crucial. The first five columns are fixed, and test cases begin
@@ -27,11 +24,7 @@ cause the parser to stop processing further columns.
 
 The table is divided into several sections:
 
-<figure>
-<img src="images/model-decision/table_testcases.jpg"
-alt="table testcases" />
-<figcaption>Test case side</figcaption>
-</figure>
+![Test case side](images/model-decision/table_testcases.jpg)
 
 On the right side of the table, each column represents one test case.
 The column header displays the test case name (in this example, simple
@@ -42,11 +35,7 @@ results.
 The left side is further divided into different sections that determine
 how test case data is structured and processed.
 
-<figure>
-<img src="images/model-decision/table_field_sub_section.jpg"
-alt="table field sub section" />
-<figcaption>Field sub section</figcaption>
-</figure>
+![Field sub section](images/model-decision/table_field_sub_section.jpg)
 
 A subsection in this case is one field and all the equivalence classes
 for this field. An equivalence class defines the different kinds of
@@ -62,11 +51,7 @@ One fieldSection may have many fieldSubSections. The FieldSection groups
 fields together. Having one or multiple fieldSections has no impact on
 the table itself. All the fieldSubSections have to be combined.
 
-<figure>
-<img src="images/model-decision/table_multi_row_section.jpg"
-alt="table multi row section" />
-<figcaption>Multi row section</figcaption>
-</figure>
+![Multi row section](images/model-decision/table_multi_row_section.jpg)
 
 The multiple row sections can be used to describe the expected results
 or error messages. It is up to the user how many of these sections are
@@ -133,10 +118,7 @@ control certain test case properties.
 
 ## ExecuteSection
 
-<figure>
-<img src="images/model-decision/execute_section.png"
-alt="execute section" />
-</figure>
+![execute section](images/model-decision/execute_section.png)
 
 The ExecuteSection indicates whether a test case should be executed. For
 example, if the value in the ExecuteSection is set to false (e.g.,
@@ -155,10 +137,7 @@ a way opposite to the ExecuteSection.
 
 ## MultiplicitySection
 
-<figure>
-<img src="images/model-decision/multiplicity_section.png"
-alt="multiplicity section" />
-</figure>
+![multiplicity section](images/model-decision/multiplicity_section.png)
 
 The MultiplicitySection specifies how many instances of a test case
 should be created from a single test case definition. For example, if
@@ -168,10 +147,7 @@ generated.
 
 ## SummarySection
 
-<figure>
-<img src="images/model-decision/summary_section.png"
-alt="summary section" />
-</figure>
+![summary section](images/model-decision/summary_section.png)
 
 The SummarySection aggregates and displays calculated results for the
 table. Although it is not used by the generator for creating test cases,

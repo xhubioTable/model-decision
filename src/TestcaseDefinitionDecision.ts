@@ -14,8 +14,8 @@ import {
   TodoGeneratorInterface,
   TodoReference,
   TodoStatic
-} from '@tlink/model'
-import { LoggerInterface } from '@tlink/logger'
+} from '@xhubiotable/model'
+import { LoggerInterface } from '@xhubiotable/logger'
 
 import { TableDecisionInterface } from './interface/TableDecisionInterface'
 import { TagSectionDefinition } from './sections/TagSectionDefinition'

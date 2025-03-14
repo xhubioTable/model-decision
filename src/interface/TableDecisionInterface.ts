@@ -1,4 +1,4 @@
-import { TableInterface } from '@tlink/model'
+import { TableInterface } from '@xhubiotable/model'
 import { SectionInterface } from './SectionInterface'
 import { TestcaseDefinitionDecision } from '../TestcaseDefinitionDecision'
 import { SectionType } from '../sections/SectionTypeEnum'

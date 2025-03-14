@@ -1,12 +1,12 @@
-[**@tlink/model-decision**](../README.md)
+[**@xhubiotable/model-decision**](../README.md)
 
 ***
 
-[@tlink/model-decision](../globals.md) / FieldSubSectionDefinition
+[@xhubiotable/model-decision](../globals.md) / FieldSubSectionDefinition
 
 # Class: FieldSubSectionDefinition
 
-Defined in: src/sections/FieldSubSectionDefinition.ts:36
+Defined in: [src/sections/FieldSubSectionDefinition.ts:36](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/FieldSubSectionDefinition.ts#L36)
 
 Represents a sub-section within a FieldSectionDefinition.
 
@@ -23,7 +23,7 @@ including its equivalence class entries, comments, and data generator (tdg) valu
 
 > **new FieldSubSectionDefinition**(`opts`): [`FieldSubSectionDefinition`](FieldSubSectionDefinition.md)
 
-Defined in: src/sections/FieldSubSectionDefinition.ts:92
+Defined in: [src/sections/FieldSubSectionDefinition.ts:92](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/FieldSubSectionDefinition.ts#L92)
 
 Constructs a new FieldSubSectionDefinition.
 
@@ -52,7 +52,7 @@ Options for initializing the FieldSubSectionDefinition.
 
 > `protected` **\_dataRows**: `string`[] = `[]`
 
-Defined in: src/sections/BaseSectionDefinition.ts:61
+Defined in: [src/sections/BaseSectionDefinition.ts:61](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L61)
 
 Stores the IDs of the data rows for this section.
 
@@ -66,7 +66,7 @@ Stores the IDs of the data rows for this section.
 
 > **comments**: `Record`\<`string`, `string`\> = `{}`
 
-Defined in: src/sections/FieldSubSectionDefinition.ts:50
+Defined in: [src/sections/FieldSubSectionDefinition.ts:50](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/FieldSubSectionDefinition.ts#L50)
 
 Stores the comments indexed by their row ID.
 
@@ -76,7 +76,7 @@ Stores the comments indexed by their row ID.
 
 > **equivalenceClasses**: `Record`\<`string`, `string`\> = `{}`
 
-Defined in: src/sections/FieldSubSectionDefinition.ts:45
+Defined in: [src/sections/FieldSubSectionDefinition.ts:45](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/FieldSubSectionDefinition.ts#L45)
 
 Stores the equivalence class entries indexed by their row ID.
 
@@ -86,7 +86,7 @@ Stores the equivalence class entries indexed by their row ID.
 
 > **headerRow**: `string`
 
-Defined in: src/sections/BaseSectionDefinition.ts:56
+Defined in: [src/sections/BaseSectionDefinition.ts:56](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L56)
 
 The identifier for the header row of the section.
 (FIXME: Consider renaming to headerRowId)
@@ -101,7 +101,7 @@ The identifier for the header row of the section.
 
 > **mandatory**: `boolean` = `false`
 
-Defined in: src/sections/BaseSectionDefinition.ts:45
+Defined in: [src/sections/BaseSectionDefinition.ts:45](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L45)
 
 Indicates whether the section is mandatory (i.e., must have at least one value).
 
@@ -115,7 +115,7 @@ Indicates whether the section is mandatory (i.e., must have at least one value).
 
 > **multiInstancesAllowed**: `boolean` = `true`
 
-Defined in: src/sections/BaseSectionDefinition.ts:66
+Defined in: [src/sections/BaseSectionDefinition.ts:66](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L66)
 
 If set to false, only one instance of this section type is allowed per model.
 
@@ -129,7 +129,7 @@ If set to false, only one instance of this section type is allowed per model.
 
 > **multiple**: `boolean` = `true`
 
-Defined in: src/sections/BaseSectionDefinition.ts:50
+Defined in: [src/sections/BaseSectionDefinition.ts:50](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L50)
 
 Indicates whether the section supports multiple data rows.
 
@@ -143,7 +143,7 @@ Indicates whether the section supports multiple data rows.
 
 > `optional` **name**: `string`
 
-Defined in: src/sections/BaseSectionDefinition.ts:40
+Defined in: [src/sections/BaseSectionDefinition.ts:40](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L40)
 
 The name of this section.
 
@@ -157,7 +157,7 @@ The name of this section.
 
 > **parent**: `string`
 
-Defined in: src/sections/FieldSubSectionDefinition.ts:66
+Defined in: [src/sections/FieldSubSectionDefinition.ts:66](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/FieldSubSectionDefinition.ts#L66)
 
 The ID of the parent section.
 
@@ -167,7 +167,7 @@ The ID of the parent section.
 
 > **sectionType**: [`SectionType`](../enumerations/SectionType.md) = `SectionType.FIELD_SUB_SECTION`
 
-Defined in: src/sections/FieldSubSectionDefinition.ts:40
+Defined in: [src/sections/FieldSubSectionDefinition.ts:40](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/FieldSubSectionDefinition.ts#L40)
 
 The section type is set to FIELD_SUB_SECTION.
 
@@ -181,7 +181,7 @@ The section type is set to FIELD_SUB_SECTION.
 
 > **tdgMandatory**: `boolean` = `false`
 
-Defined in: src/sections/FieldSubSectionDefinition.ts:61
+Defined in: [src/sections/FieldSubSectionDefinition.ts:61](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/FieldSubSectionDefinition.ts#L61)
 
 Indicates if the data generator column is mandatory.
 Default is false.
@@ -192,7 +192,7 @@ Default is false.
 
 > **tdgs**: `Record`\<`string`, `string`\> = `{}`
 
-Defined in: src/sections/FieldSubSectionDefinition.ts:55
+Defined in: [src/sections/FieldSubSectionDefinition.ts:55](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/FieldSubSectionDefinition.ts#L55)
 
 Stores the data generator (tdg) entries indexed by their row ID.
 
@@ -204,7 +204,7 @@ Stores the data generator (tdg) entries indexed by their row ID.
 
 > **get** **dataRows**(): `string`[]
 
-Defined in: src/sections/FieldSubSectionDefinition.ts:72
+Defined in: [src/sections/FieldSubSectionDefinition.ts:72](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/FieldSubSectionDefinition.ts#L72)
 
 Getter for the data row IDs of this sub-section.
 
@@ -218,7 +218,7 @@ An array of row IDs.
 
 > **set** **dataRows**(`value`): `void`
 
-Defined in: src/sections/FieldSubSectionDefinition.ts:80
+Defined in: [src/sections/FieldSubSectionDefinition.ts:80](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/FieldSubSectionDefinition.ts#L80)
 
 Setter for the data row IDs of this sub-section.
 
@@ -244,7 +244,7 @@ The new array of row IDs.
 
 > **createNewRow**(): `string`
 
-Defined in: src/sections/BaseSectionDefinition.ts:119
+Defined in: [src/sections/BaseSectionDefinition.ts:119](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L119)
 
 Creates a new data row for this section.
 
@@ -271,7 +271,7 @@ Error if the section does not support multiple rows.
 
 > **getRowIds**(): `string`[]
 
-Defined in: src/sections/BaseSectionDefinition.ts:136
+Defined in: [src/sections/BaseSectionDefinition.ts:136](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L136)
 
 Retrieves all row IDs associated with this section.
 
@@ -294,7 +294,7 @@ An array of row IDs.
 
 > **isHeader**(`rowid`): `boolean`
 
-Defined in: src/sections/BaseSectionDefinition.ts:106
+Defined in: [src/sections/BaseSectionDefinition.ts:106](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/BaseSectionDefinition.ts#L106)
 
 Determines if a given row ID corresponds to the header row.
 
@@ -322,7 +322,7 @@ True if the provided row ID is the header row; otherwise, false.
 
 > **validate**(): [`SectionErrorInterface`](../interfaces/SectionErrorInterface.md)[]
 
-Defined in: src/sections/FieldSubSectionDefinition.ts:117
+Defined in: [src/sections/FieldSubSectionDefinition.ts:117](https://github.com/xhubioTable/model-decision/blob/bb86cb17a9e3e1e8be81aea7d412ff6f096a060e/src/sections/FieldSubSectionDefinition.ts#L117)
 
 Validates this sub-section definition.
 

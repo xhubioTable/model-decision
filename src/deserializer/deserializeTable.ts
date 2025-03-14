@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises'
 import { TableDecision } from '../TableDecision'
-import { LoggerMemory } from '@tlink/logger'
+import { LoggerMemory } from '@xhubiotable/logger'
 import { TestcaseDefinitionDecision } from '../TestcaseDefinitionDecision'
 import { SectionType } from '../sections/SectionTypeEnum'
 import { deserializeSummarySection } from './sections/deserializeSummarySection'
